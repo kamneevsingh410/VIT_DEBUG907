@@ -1,0 +1,29 @@
+{
+  "gte-modernbert": {
+    "model": "Alibaba-NLP/gte-modernbert-base",
+    "ndcg_at_10": 0.4905888249132321,
+    "mrr": 0.4506161327176362,
+    "recall_at_100": 0.863,
+    "corpus_encode_s": 1546.1,
+    "search_s": 2.1,
+    "quantize": false
+  },
+  "granite-r2": {
+    "model": "ibm-granite/granite-embedding-english-r2",
+    "ndcg_at_10": 0.12753268858328523,
+    "mrr": 0.11668923734641864,
+    "recall_at_100": 0.37,
+    "corpus_encode_s": 1480.7,
+    "search_s": 2.1,
+    "quantize": false
+  },
+  "jina": {
+    "model": "jinaai/jina-embeddings-v2-base-code",
+    "ndcg_at_10": 0.14342672506975893,
+    "mrr": 0.12731461889383758,
+    "recall_at_100": 0.432,
+    "corpus_encode_s": 1633.2,
+    "search_s": 2.1,
+    "quantize": false
+  }
+}

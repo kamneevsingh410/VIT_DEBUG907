@@ -1,0 +1,67 @@
+{
+  "describes": "appsretrieval_results.json",
+  "why_this_file_exists": "MTEB's TaskResult JSON records dataset_revision but not the model; MTEB keeps model identity only in its cache directory layout. This sidecar records which configuration produced the artifact.",
+  "artifact_scores": {
+    "ndcg_at_10": 0.60952,
+    "mrr_at_10": 0.5632031661712937,
+    "recall_at_100": 0.92457
+  },
+  "artifact_date": "2026-09-28 15:10:26.149053+00:00",
+  "model_meta": {
+    "name": "debug907/gte-modernbert-base-raw",
+    "revision": "seq1024-fp32-hub-train-excl-k20-b0.75",
+    "max_tokens": 1024.0,
+    "embed_dim": 769,
+    "similarity_fn_name": "cosine (dot product of the 769-d vectors: cosine of the 768-d embeddings minus beta*hub)",
+    "reference": "https://huggingface.co/Alibaba-NLP/gte-modernbert-base",
+    "framework": [
+      "Sentence Transformers",
+      "PyTorch"
+    ]
+  },
+  "configuration": {
+    "encoder": "Alibaba-NLP/gte-modernbert-base",
+    "precision": "fp32",
+    "max_seq_length": 1024,
+    "document_view": "raw (the document as given, ends stripped as MTEB passes it; no code view, no 512-word cut)",
+    "retrieval": "dense + hubness correction",
+    "hubness_correction": {
+      "score": "cos(q, d) - beta * hub(d)",
+      "hub": "mean cosine of d to its k nearest AppsRetrieval TRAINING queries; a document's own training queries excluded; test queries never used",
+      "k": 20,
+      "beta": 0.75,
+      "table": "data/apps_hubness.json",
+      "inside_mteb": "one appended dimension: +1 for queries, -beta*hub(d) for documents (encoder.py hub_table)",
+      "evidence": "doc_variant_raw.md: raw + hubness vs the previous artifact +0.0702 NDCG@10 on the full split [+0.0618, +0.0784] and +0.0702 on the 2,765 held-out queries; hubness.md for the correction itself",
+      "document_text": "raw",
+      "rebuilt": "28 Sep, on the raw-document vectors, same training queries, k and beta not re-tuned (tools/build_hub_table.py)"
+    }
+  },
+  "environment": {
+    "transformers": "4.56.2",
+    "sentence-transformers": "4.1.0",
+    "torch": "2.14.0+cpu",
+    "mteb": "2.21.5",
+    "verified": "tools/verify_env.py: fresh vectors match stored ones at cosine 1.000000"
+  },
+  "produced_at_commit": "d12194f (reproduce --full at that commit: official MTEB +0.00000, tool path +0.00009)",
+  "previous_artifacts": [
+    {
+      "file": "appsretrieval_results.hub_codeview.backup.json",
+      "ndcg_at_10": 0.53926,
+      "mrr_at_10": 0.4924949935706908,
+      "recall_at_100": 0.89296,
+      "configuration": "code-view documents + hubness correction (run_mteb.py --code-view)"
+    },
+    {
+      "file": "appsretrieval_results.cosine.backup.json",
+      "ndcg_at_10": 0.50431,
+      "mrr_at_10": 0.4558314888593773,
+      "recall_at_100": 0.87862,
+      "configuration": "code-view documents, plain cosine (run_mteb.py --code-view --no-hubness)"
+    }
+  ],
+  "artifact_sha256": "ec84a47173a8abde78dea90372f305dc146cd3acef7e035391f073f8e536d413",
+  "artifact_sha256_note": "sha256 of appsretrieval_results.json as committed, LF line endings, identical on every platform since 29 Sep (.gitattributes -text); the 52420db9... recorded before was the same JSON with Windows CRLF endings (check: sha256sum appsretrieval_results.json)",
+  "rankings_csv_sha256": "f920cc393e57983ade563360962d8a91693875d20a6c10f015de37db79844869"
+}

@@ -1,0 +1,25 @@
+{
+ "how": "mteb.get_model (as MTEB registers it)",
+ "max_seq_length": 8192,
+ "revision": "7ca8b4ca700621b67618669f5378fe5f5820b8e4",
+ "naive": {
+  "ndcg_at_10": 0.31908,
+  "mrr_at_10": 0.27871687851767535,
+  "recall_at_100": 0.70598
+ },
+ "ours": {
+  "ndcg_at_10": 0.60952,
+  "mrr_at_10": 0.5632031661712937,
+  "recall_at_100": 0.92457
+ },
+ "ours_plain_cosine": {
+  "ndcg_at_10": 0.50431,
+  "mrr_at_10": 0.4558314888593773,
+  "recall_at_100": 0.87862
+ },
+ "beats_ours": false,
+ "minutes": 74.8,
+ "peak_memory_gb": 4.9,
+ "batch_size": 4,
+ "raw_plain_1024_ndcg": 0.5754230101991219
+}

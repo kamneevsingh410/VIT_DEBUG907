@@ -1,0 +1,30 @@
+{
+  "note": "Manual labels: each of the 50 sampled misses (tools/failures.py, answer not in the top 10, random seed 0) was read - statement, gold solution, returned #1 - and given ONE primary cause. Judgement, not a measurement.",
+  "categories": {
+    "shared_technique": "The gold solution uses a very common pattern (DP, DFS, bisect, sort + greedy, gcd). The #1 solves a different problem with the same pattern: the code vector matches the technique, not the task.",
+    "closed_form": "A short solution that encodes a mathematical insight the statement never names (e.g. print((n-1)//2) for a story about schools). Almost nothing in the code connects to the story.",
+    "scaffolding": "Contest template, debug helpers or long comments swamp the few lines of actual logic the encoder should see.",
+    "unreadable": "The gold is not readable code (base64 + exec).",
+    "library_idiom": "The gold solves the task through an unusual library (networkx / numpy) rather than the algorithm the statement implies.",
+    "non_english": "The statement is not in English; the encoder is an English model."
+  },
+  "labels": {
+    "q7277": "shared_technique", "q7482": "library_idiom", "q5307": "shared_technique",
+    "q6651": "shared_technique", "q8015": "shared_technique", "q7885": "shared_technique",
+    "q7402": "closed_form", "q6860": "scaffolding", "q7817": "closed_form",
+    "q7145": "shared_technique", "q8480": "closed_form", "q6418": "scaffolding",
+    "q7977": "closed_form", "q5968": "closed_form", "q6768": "closed_form",
+    "q5971": "shared_technique", "q5683": "closed_form", "q8695": "shared_technique",
+    "q6614": "non_english", "q8129": "shared_technique", "q8597": "closed_form",
+    "q6023": "shared_technique", "q6892": "shared_technique", "q5708": "shared_technique",
+    "q5538": "closed_form", "q7005": "closed_form", "q7780": "shared_technique",
+    "q8330": "closed_form", "q5715": "closed_form", "q7116": "shared_technique",
+    "q7564": "shared_technique", "q6917": "shared_technique", "q8658": "shared_technique",
+    "q6324": "shared_technique", "q8248": "shared_technique", "q7602": "closed_form",
+    "q8072": "shared_technique", "q6668": "scaffolding", "q5444": "closed_form",
+    "q8221": "shared_technique", "q5099": "closed_form", "q5668": "unreadable",
+    "q7358": "closed_form", "q8757": "shared_technique", "q5004": "shared_technique",
+    "q8667": "closed_form", "q7923": "closed_form", "q7021": "closed_form",
+    "q6582": "shared_technique", "q6964": "shared_technique"
+  }
+}

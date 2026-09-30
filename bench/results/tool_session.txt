@@ -1,0 +1,217 @@
+
+       _        _                     ___    ___   _____
+    __| |  ___ | |__   _   _   __ _  / _ \  / _ \ |___  |
+   / _` | / _ \| '_ \ | | | | / _` || (_) || | | |   / /
+  | (_| ||  __/| |_) || |_| || (_| | \__, || |_| |  / /
+   \__,_| \___||_.__/  \__,_| \__, |   /_/  \___/  /_/
+                              |___/
+
+  natural-language code retrieval
+  created by Aadvik Chawla and Kamneev Singh
+
+  loading model ...
+  ready  | gte-modernbert-base (seq 1024)  | index out\real.db  | 8,765 snippets  | model loaded in 39.8s
+  type a question, or :help
+
+debug907> find the length of the longest increasing subsequence
+  50 results  |  65.8 ms  |  confidence low (margin 0.001)
+
+   1.  0.2344  AppsRetrieval:1-39  d223  [low]
+  1 class Solution:
+  2     def lenLongestFibSubseq(self, A: List[int]) -> int:
+  3         
+  4         def getFS(x1, x2):
+
+   2.  0.2337  AppsRetrieval:1-19  d2525
+  1 class Solution:
+  2      def findLengthOfLCIS(self, nums):
+  3          """
+  4          :type nums: List[int]
+
+   3.  0.2297  AppsRetrieval:1-6  d1616
+  1 def longest_slide_down(p):
+  2     res = p.pop()
+  3     while p:
+  4         tmp = p.pop()
+
+   4.  0.2271  AppsRetrieval:1-18  d143
+  1 class Solution:
+  2      def findLUSlength(self, strs):
+  3          """
+  4          :type strs: List[str]
+
+   5.  0.2208  AppsRetrieval:1-9  d2705
+  1 def almost_increasing_sequence(sequence):
+  2     save, first = -float('inf'), True
+  3     for i,x in enumerate(sequence):
+  4         if x > save: save = x
+  ... 45 more  (:more, or :open N)
+debug907> open 1
+   1.  0.2344  AppsRetrieval:1-39  d223  [low]
+   1 class Solution:
+   2     def lenLongestFibSubseq(self, A: List[int]) -> int:
+   3         
+   4         def getFS(x1, x2):
+   5             F = [x1, x2]
+   6             while F[-1] <= 1000000000:
+   7                 F.append(F[-2] + F[-1])
+   8             return F
+   9 
+  10         C1 = getFS(1, 0)
+  11         C2 = C1[1:]
+  12         
+  13         def getLLFS(x1, x2):
+  14             max_len = 2
+  15             F = [x1, x2]
+  16             xi = x1 + x2
+  17             while xi in setA: 
+  18                 max_len += 1
+  19                 F.append(xi)
+  20                 xi = F[-2] + F[-1]
+  21             if max_len == 6:
+  22                 print(F)
+  23             return max_len
+  24         
+  25         max_len = 2
+  26         setA = set(A)
+  27         for i in range(len(A)):
+  28             for j in range(i+1, len(A)):
+  29                 x1, x2 = A[i], A[j]
+  30                 
+  31                 # calculate X_{max_len+1}
+  32                 if x1 * C1[max_len] + x2 * C2[max_len] > A[-1]:
+  33                     break
+  34                 max_len = max(max_len, getLLFS(x1, x2))
+  35                 
+  36         if max_len < 3:
+  37             return 0
+  38         return max_len
+  39         
+debug907> where is setrecursionlimit used  Understood as: usages of setrecursionlimit
+
+  162 lines in 156 snippets mention 'setrecursionlimit'  |  610 ms  (exact match)
+  AppsRetrieval:6  d1035
+      sys.setrecursionlimit(10**7)
+  AppsRetrieval:2  d1248
+      sys.setrecursionlimit(10000000)
+  AppsRetrieval:2  d1271
+      sys.setrecursionlimit(100000)
+  AppsRetrieval:2  d1279
+      from sys import stdin,stdout,setrecursionlimit
+  AppsRetrieval:2  d1297
+      sys.setrecursionlimit(10**8)
+  AppsRetrieval:13  d1305
+      # sys.setrecursionlimit(10**7)
+  AppsRetrieval:9  d1507
+      sys.setrecursionlimit(100000000)
+  AppsRetrieval:2  d1567
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:31  d157
+      sys.setrecursionlimit(10**6)
+  AppsRetrieval:4  d1573
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:9  d1600
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:14  d1684
+      # sys.setrecursionlimit(10**6)
+  AppsRetrieval:3  d2033
+      sys.setrecursionlimit(10**7)
+  AppsRetrieval:4  d2057
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:215  d2104
+      sys.setrecursionlimit(100000)
+  AppsRetrieval:6  d2105
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:3  d2133
+      sys.setrecursionlimit(10**7)
+  AppsRetrieval:24  d2209
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:3  d2226
+      sys.setrecursionlimit(10**9)
+  AppsRetrieval:4  d2235
+      sys.setrecursionlimit(10**6)
+  AppsRetrieval:47  d2236
+      sys.setrecursionlimit(2097152)
+  AppsRetrieval:2  d2269
+      sys.setrecursionlimit(10**6)
+  AppsRetrieval:7  d2321
+      from sys import stdin, stdout, setrecursionlimit
+  AppsRetrieval:38  d2321
+      setrecursionlimit(10**6)
+  AppsRetrieval:4  d2325
+      sys.setrecursionlimit(10 ** 6)
+  AppsRetrieval:25  d2371
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:3  d2399
+      sys.setrecursionlimit(10 ** 5)
+  AppsRetrieval:5  d2400
+      #sys.setrecursionlimit(10**6)
+  AppsRetrieval:7  d26
+      sys.setrecursionlimit(10 ** 9)
+  AppsRetrieval:4  d5069
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:2  d510
+      sys.setrecursionlimit(10**6)
+  AppsRetrieval:4  d5118
+      sys.setrecursionlimit(10**9)
+  AppsRetrieval:3  d513
+      sys.setrecursionlimit(10**5)
+  AppsRetrieval:3  d514
+      sys.setrecursionlimit(10**7)
+  AppsRetrieval:6  d523
+      sys.setrecursionlimit(10**9)
+  AppsRetrieval:10  d5266
+      # sys.setrecursionlimit(999999999)
+  AppsRetrieval:3  d5288
+      sys.setrecursionlimit(10**7)
+  AppsRetrieval:179  d5373
+      sys.setrecursionlimit(100000)
+  AppsRetrieval:4  d5383
+      sys.setrecursionlimit(1000000)
+  AppsRetrieval:3  d5498
+      sys.setrecursionlimit(10**7)
+  ... 122 more
+debug907> which functions call input before sorted  Understood as: functions that call input() before sorted()  (7 other matches - type 'more matches' to see)
+
+  311 functions call input() before sorted()  |  1014 ms  (source order within a function; aliases not followed)
+  AppsRetrieval:1  d53   input at line 1, sorted at line 2
+  AppsRetrieval:1  d2581   input at line 1, sorted at line 2
+  AppsRetrieval:1  d6194   input at line 1, sorted at line 2
+  AppsRetrieval:1  d2294   input at line 1, sorted at line 3
+  AppsRetrieval:1  d6779   input at line 1, sorted at line 4
+  AppsRetrieval:1  d7263   input at line 1, sorted at line 2
+  AppsRetrieval:1  d7888   input at line 1, sorted at line 3
+  AppsRetrieval:1  d6417   input at line 1, sorted at line 2
+  AppsRetrieval:1  d6828   input at line 1, sorted at line 2
+  AppsRetrieval:1  d5815   input at line 1, sorted at line 4
+  AppsRetrieval:1  d7175   input at line 1, sorted at line 2
+  AppsRetrieval:1  d5511   input at line 1, sorted at line 6
+  AppsRetrieval:1  d6013   input at line 1, sorted at line 4
+  AppsRetrieval:1  d7016   input at line 1, sorted at line 4
+  AppsRetrieval:1  d7598   input at line 1, sorted at line 4
+  AppsRetrieval:1  d8308   input at line 1, sorted at line 2
+  AppsRetrieval:1  d8399   input at line 1, sorted at line 2
+  AppsRetrieval:1  d958   input at line 1, sorted at line 4
+  AppsRetrieval:1  d982   input at line 1, sorted at line 6
+  AppsRetrieval:1  d2076   input at line 1, sorted at line 4
+  AppsRetrieval:1  d2634   input at line 1, sorted at line 6
+  AppsRetrieval:1  d5230   input at line 1, sorted at line 8
+  AppsRetrieval:1  d6391   input at line 1, sorted at line 3
+  AppsRetrieval:1  d7757   input at line 1, sorted at line 2
+  AppsRetrieval:1  d8330   input at line 1, sorted at line 4
+  AppsRetrieval:1  d1476   input at line 1, sorted at line 6
+  AppsRetrieval:1  d1533   input at line 1, sorted at line 3
+  AppsRetrieval:1  d5352   input at line 1, sorted at line 3
+  AppsRetrieval:1  d5729   input at line 1, sorted at line 4
+  AppsRetrieval:1  d6056   input at line 1, sorted at line 6
+  AppsRetrieval:1  d6093   input at line 1, sorted at line 2
+  AppsRetrieval:1  d6239   input at line 1, sorted at line 2
+  AppsRetrieval:1  d6618   input at line 1, sorted at line 10
+  AppsRetrieval:1  d1096   input at line 1, sorted at line 4
+  AppsRetrieval:1  d5542   input at line 1, sorted at line 4
+  AppsRetrieval:1  d5727   input at line 1, sorted at line 3
+  AppsRetrieval:1  d6753   input at line 1, sorted at line 3
+  AppsRetrieval:1  d7289   input at line 1, sorted at line 8
+  AppsRetrieval:1  d7592   input at line 1, sorted at line 4
+  AppsRetrieval:1  d8235   input at line 1, sorted at line 4
+debug907> quit  bye.

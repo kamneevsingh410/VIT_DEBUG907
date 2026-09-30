@@ -1,0 +1,15 @@
+{
+ "file": "appsretrieval_index.db.gz",
+ "sha256": "66770a2ceb0073e5365e0a034bbb1a89d20692700ea729620ee1058ce41be71c",
+ "size": 35673233,
+ "db_sha256": "d7a16f14244baf00297f6660e2b4c069c4005d6af01ea04e2993c69bc7060e64",
+ "db_size": 67452928,
+ "snippets": 8765,
+ "vectors": 8754,
+ "views": [
+  "raw"
+ ],
+ "corpus_kind": "apps",
+ "embedder_sig": "Alibaba-NLP/gte-modernbert-base|seq1024|int8=False",
+ "contains": "the 8,765 public AppsRetrieval corpus snippets, their search text and their vectors; no queries, relevance labels or rankings"
+}

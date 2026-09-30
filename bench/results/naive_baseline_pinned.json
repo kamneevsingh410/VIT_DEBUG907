@@ -1,0 +1,26 @@
+{
+ "how": "stock SentenceTransformer on the pinned snapshot, default settings",
+ "max_seq_length": 8192,
+ "revision": "e7f32e3c00f91d699e8c43b53106206bcc72bb22 (this repo's pinned snapshot, the model card's current revision)",
+ "pinned": true,
+ "naive": {
+  "ndcg_at_10": 0.57673,
+  "mrr_at_10": 0.5288454647020384,
+  "recall_at_100": 0.91873
+ },
+ "ours": {
+  "ndcg_at_10": 0.60952,
+  "mrr_at_10": 0.5632031661712937,
+  "recall_at_100": 0.92457
+ },
+ "ours_plain_cosine": {
+  "ndcg_at_10": 0.50431,
+  "mrr_at_10": 0.4558314888593773,
+  "recall_at_100": 0.87862
+ },
+ "raw_plain_1024_ndcg": 0.5754230101991219,
+ "minutes": 70.6,
+ "peak_memory_gb": 4.8,
+ "batch_size": 4,
+ "beats_ours": false
+}

@@ -1,0 +1,322 @@
+{
+ "runs": {
+  "CodeSearchNetRetrieval[javascript]": {
+   "task": "CodeSearchNetRetrieval",
+   "subsets": [
+    "javascript"
+   ],
+   "per_subset": {
+    "javascript": {
+     "split": "test",
+     "ndcg_at_10": 0.80845,
+     "mrr_at_10": 0.7852313492063493,
+     "recall_at_100": 0.933,
+     "documents": 1000,
+     "queries": 1000
+    }
+   },
+   "minutes": 7.7,
+   "peak_memory_gb": 2.2,
+   "documents_all_subsets": 6000,
+   "queries_all_subsets": 6000,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 05:27"
+  },
+  "CodeSearchNetRetrieval[python,go,ruby,java,php]": {
+   "task": "CodeSearchNetRetrieval",
+   "subsets": [
+    "python",
+    "go",
+    "ruby",
+    "java",
+    "php"
+   ],
+   "per_subset": {
+    "python": {
+     "split": "test",
+     "ndcg_at_10": 0.90261,
+     "mrr_at_10": 0.8785543650793651,
+     "recall_at_100": 0.992,
+     "documents": 1000,
+     "queries": 1000
+    },
+    "go": {
+     "split": "test",
+     "ndcg_at_10": 0.95892,
+     "mrr_at_10": 0.9480579365079365,
+     "recall_at_100": 0.997,
+     "documents": 1000,
+     "queries": 1000
+    },
+    "ruby": {
+     "split": "test",
+     "ndcg_at_10": 0.85194,
+     "mrr_at_10": 0.8260535714285715,
+     "recall_at_100": 0.963,
+     "documents": 1000,
+     "queries": 1000
+    },
+    "java": {
+     "split": "test",
+     "ndcg_at_10": 0.91586,
+     "mrr_at_10": 0.8997468253968255,
+     "recall_at_100": 0.977,
+     "documents": 1000,
+     "queries": 1000
+    },
+    "php": {
+     "split": "test",
+     "ndcg_at_10": 0.88866,
+     "mrr_at_10": 0.8671900793650793,
+     "recall_at_100": 0.972,
+     "documents": 1000,
+     "queries": 1000
+    }
+   },
+   "minutes": 28.4,
+   "peak_memory_gb": 2.3,
+   "documents_all_subsets": 6000,
+   "queries_all_subsets": 6000,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 05:58"
+  },
+  "StackOverflowQA": {
+   "task": "StackOverflowQA",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.91207,
+     "mrr_at_10": 0.8969730620432727,
+     "recall_at_100": 0.98746
+    }
+   },
+   "minutes": 132.9,
+   "peak_memory_gb": 2.5,
+   "documents_all_subsets": 19931,
+   "queries_all_subsets": 1994,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 08:12"
+  },
+  "DS1000Retrieval": {
+   "task": "DS1000Retrieval",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.51776,
+     "mrr_at_10": 0.42253920587253924,
+     "recall_at_100": 0.97197
+    }
+   },
+   "minutes": 16.2,
+   "peak_memory_gb": 2.0,
+   "documents_all_subsets": 1998,
+   "queries_all_subsets": 1998,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 15:08"
+  },
+  "FreshStackRetrieval": {
+   "task": "FreshStackRetrieval",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.31838,
+     "mrr_at_10": 0.5046373063114135,
+     "recall_at_100": 0.69545
+    }
+   },
+   "minutes": 63.5,
+   "peak_memory_gb": 2.4,
+   "documents_all_subsets": 3804,
+   "queries_all_subsets": 672,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 16:12"
+  },
+  "HumanEvalRetrieval": {
+   "task": "HumanEvalRetrieval",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.84481,
+     "mrr_at_10": 0.8072583885875025,
+     "recall_at_100": 1.0
+    }
+   },
+   "minutes": 0.7,
+   "peak_memory_gb": 1.5,
+   "documents_all_subsets": 158,
+   "queries_all_subsets": 158,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 16:14"
+  },
+  "MBPPRetrieval": {
+   "task": "MBPPRetrieval",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.80732,
+     "mrr_at_10": 0.7640102995339135,
+     "recall_at_100": 0.99076
+    }
+   },
+   "minutes": 1.8,
+   "peak_memory_gb": 1.7,
+   "documents_all_subsets": 974,
+   "queries_all_subsets": 974,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 16:16"
+  },
+  "WikiSQLRetrieval": {
+   "task": "WikiSQLRetrieval",
+   "subsets": null,
+   "per_subset": {
+    "default": {
+     "split": "test",
+     "ndcg_at_10": 0.94705,
+     "mrr_at_10": 0.9332170758928572,
+     "recall_at_100": 0.99805
+    }
+   },
+   "minutes": 23.0,
+   "peak_memory_gb": 2.2,
+   "documents_all_subsets": 2048,
+   "queries_all_subsets": 2048,
+   "encoder": "PrePostPipelineEncoder() defaults: raw documents, seq 1024, fp32, no hub table",
+   "finished_at": "2026-09-29 16:39"
+  }
+ },
+ "catalog": [
+  {
+   "task": "CodeSearchNetRetrieval",
+   "documents": 6000,
+   "queries": 6000,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "StackOverflowQA",
+   "documents": 19931,
+   "queries": 1994,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "DS1000Retrieval",
+   "documents": 1998,
+   "queries": 1998,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "FreshStackRetrieval",
+   "documents": 3804,
+   "queries": 672,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "HumanEvalRetrieval",
+   "documents": 158,
+   "queries": 158,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "MBPPRetrieval",
+   "documents": 974,
+   "queries": 974,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "WikiSQLRetrieval",
+   "documents": 2048,
+   "queries": 2048,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "CosQA",
+   "documents": 20604,
+   "queries": 500,
+   "kind": "NL\u2192code",
+   "runnable": true
+  },
+  {
+   "task": "COIRCodeSearchNetRetrieval",
+   "documents": 1003765,
+   "queries": 52561,
+   "kind": "NL\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "CodeSearchNetCCRetrieval",
+   "documents": 1005474,
+   "queries": 52561,
+   "kind": "code\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "CodeFeedbackST",
+   "documents": 156526,
+   "queries": 31306,
+   "kind": "NL\u2192code (chat)",
+   "runnable": false
+  },
+  {
+   "task": "CodeFeedbackMT",
+   "documents": 66383,
+   "queries": 13277,
+   "kind": "NL\u2192code (multi-turn)",
+   "runnable": false
+  },
+  {
+   "task": "SyntheticText2SQL",
+   "documents": 105851,
+   "queries": 5851,
+   "kind": "NL\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "SWEbenchCodeRetrieval",
+   "documents": 58058,
+   "queries": 500,
+   "kind": "issue\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "RARbCode",
+   "documents": 301482,
+   "queries": 1484,
+   "kind": "reasoning\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "CodeTransOceanContest",
+   "documents": 1008,
+   "queries": 221,
+   "kind": "code\u2192code",
+   "runnable": false
+  },
+  {
+   "task": "CodeTransOceanDL",
+   "documents": 816,
+   "queries": 180,
+   "kind": "code\u2192code",
+   "runnable": false
+  }
+ ],
+ "notes": {
+  "CodeSearchNetRetrieval": "docstring \u2192 function in six languages; strong (80.8\u201395.9). JavaScript is the lowest: its docstrings are shortest and JS functions lean on callbacks and generic names.",
+  "StackOverflowQA": "question \u2192 accepted answer with code; 91.21, level with the model card's 91.2, so the setup reproduces published numbers on held-out data.",
+  "DS1000Retrieval": "weak at the top (51.78) but R@100 97.2: the answers are short pandas/numpy/matplotlib snippets that look alike, so the right one is found but not ranked first. A reranker would target exactly this.",
+  "FreshStackRetrieval": "the weakest (31.84, R@100 69.6): recent Stack Overflow questions about newer libraries, answered by chunks of GitHub repositories, with several relevant chunks per question, far from the model's training data.",
+  "HumanEvalRetrieval / MBPPRetrieval": "short problem \u2192 short solution; 84.48 / 80.73, R@100 ~100.",
+  "WikiSQLRetrieval": "question \u2192 SQL query; 94.70: the SQL repeats the question's column names.",
+  "CosQA": "web queries \u2192 Python functions; 43.06 vs the card's 43.47: CosQA's labels are noisy and every model scores low."
+ }
+}

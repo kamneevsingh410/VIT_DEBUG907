@@ -1,0 +1,22 @@
+{
+ "queries": 50,
+ "cli": {
+  "ndcg_at_10": 0.6633203884426839,
+  "mrr_at_10": 0.639,
+  "queries": 50,
+  "recall_at_100": 0.98
+ },
+ "shipped": {
+  "ndcg_at_10": 0.6633203884426839,
+  "mrr_at_10": 0.639,
+  "queries": 50,
+  "recall_at_100": 0.98
+ },
+ "identical_scores": true,
+ "identical_order": true,
+ "rank_seconds": 2.0,
+ "index_corpus_seconds": 39.4,
+ "generic_corpus_kind": "corpus",
+ "generic_equals_plain_cosine": true,
+ "eval_output": "rankings  out\\batch_check\\ranked.csv  (50 ranked queries)\nqrels     out\\batch_check\\qrels.tsv  (50 judged queries)\nNDCG@10   0.66332\nMRR@10    0.63900\nR@100     0.98000"
+}

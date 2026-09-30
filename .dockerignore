@@ -1,0 +1,11 @@
+out/
+external/
+.git/
+debug907/
+**/__pycache__/
+**/*.pyc
+.pytest_cache/
+*.db
+bench/results/*.log
+Untitled-*.py
+appsretrieval_rankings.csv

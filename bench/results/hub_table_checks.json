@@ -1,0 +1,72 @@
+{
+ "table": {
+  "k": 20,
+  "beta": 0.75,
+  "document_text": "raw",
+  "source": "train-excl",
+  "documents": 8765
+ },
+ "k_beta_provenance": {
+  "sample_sweep_best_k": 20,
+  "sample_sweep_best_beta": 0.75,
+  "sweep_rows": 27,
+  "sweep_queries": 1000,
+  "matches_table": true
+ },
+ "train_answer_documents": 5000,
+ "documents": 8765,
+ "separation_auc": 0.4907201593625498,
+ "groups": {
+  "full split": {
+   "queries": 3765,
+   "plain": 0.5753202376352504,
+   "hub": 0.6092706455003374,
+   "diff": 0.033950407865087066,
+   "low": 0.02760481994743026,
+   "high": 0.04019523810271073,
+   "p": 0.0,
+   "significant": true
+  },
+  "held-out (not in the sample)": {
+   "queries": 2765,
+   "plain": 0.5722333475711168,
+   "hub": 0.6052959007014538,
+   "diff": 0.033062553130337034,
+   "low": 0.026558972010035868,
+   "high": 0.040440796410060036,
+   "p": 0.0,
+   "significant": true
+  },
+  "sample (where k, beta were chosen)": {
+   "queries": 1000,
+   "plain": 0.58385548866258,
+   "hub": 0.6202608148692509,
+   "diff": 0.03640532620667092,
+   "low": 0.023953937109491855,
+   "high": 0.047093762708601744,
+   "p": 0.0,
+   "significant": true
+  },
+  "test-answers-only corpus (train answers removed)": {
+   "queries": 3765,
+   "plain": 0.6177003568525441,
+   "hub": 0.6413742277591393,
+   "diff": 0.023673870906595215,
+   "low": 0.017600946782400907,
+   "high": 0.02974414627159881,
+   "p": 0.0,
+   "significant": true
+  },
+  "test-answers-only, held-out": {
+   "queries": 2765,
+   "plain": 0.6153986089453226,
+   "hub": 0.6373601859729455,
+   "diff": 0.021961577027622973,
+   "low": 0.015243854958521985,
+   "high": 0.029000344628477785,
+   "p": 0.0,
+   "significant": true
+  }
+ },
+ "seconds": 22.1
+}

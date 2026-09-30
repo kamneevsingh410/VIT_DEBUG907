@@ -1,0 +1,10 @@
+*.sh    text eol=lf
+*.ps1   text eol=crlf
+*.cmd   text eol=crlf
+Dockerfile text eol=lf
+
+appsretrieval_results*.json -text
+appsretrieval_rankings.csv -text
+data/prebuilt_index.json -text
+*.db binary
+*.gz binary

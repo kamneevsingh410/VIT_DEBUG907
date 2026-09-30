@@ -1,0 +1,54 @@
+{
+ "query": "How is the input preprocessed before going to the main function?",
+ "route": "ranked search",
+ "expected": [
+  "Code#1",
+  "Code#2",
+  "Code#3"
+ ],
+ "rank": [
+  [
+   "Code#3",
+   0.552284
+  ],
+  [
+   "Code#2",
+   0.547846
+  ],
+  [
+   "Code#1",
+   0.534305
+  ]
+ ],
+ "tool": [
+  [
+   "Code#3",
+   0.5523
+  ],
+  [
+   "Code#2",
+   0.5478
+  ],
+  [
+   "Code#1",
+   0.5343
+  ]
+ ],
+ "matches": false,
+ "tool_equals_rank": true,
+ "paraphrase": [
+  [
+   "handleUtterance",
+   0.591412
+  ],
+  [
+   "hasLocalePrefix",
+   0.498262
+  ],
+  [
+   "playAlarmSound",
+   0.409717
+  ]
+ ],
+ "paraphrase_matches": true
+}

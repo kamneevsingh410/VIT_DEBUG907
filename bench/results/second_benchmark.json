@@ -1,0 +1,18 @@
+{
+ "task": "CosQA",
+ "published_ndcg_at_10": 43.47,
+ "shipped": {
+  "ndcg_at_10": 0.3762,
+  "mrr_at_10": 0.2892436507936508,
+  "recall_at_100": 0.952,
+  "minutes": 34.5,
+  "file": "out/mteb_cosqa_shipped.json"
+ },
+ "raw": {
+  "ndcg_at_10": 0.43056,
+  "mrr_at_10": 0.34102460317460315,
+  "recall_at_100": 0.968,
+  "minutes": 32.3,
+  "file": "out/mteb_cosqa_raw.json"
+ }
+}

@@ -1,0 +1,1043 @@
+{
+  "root": "external/npm",
+  "functions": 2663,
+  "pseudo_stats": {
+    "functions": 2663,
+    "with_comment": 216,
+    "too_short": 20,
+    "leaked": 79,
+    "duplicate_text": 10,
+    "kept": 107
+  },
+  "handwritten": 20,
+  "handwritten_missing": [],
+  "build": {
+    "seconds": 338.7,
+    "snippets": 2663,
+    "views": 2,
+    "vectors_new": 4940,
+    "vectors_reused": 0,
+    "reuse_pct": 0.0,
+    "texts_from_cache": 2509,
+    "texts_model_encoded": 2431,
+    "encode_ms": 330701,
+    "elapsed_ms": 338498,
+    "embedder": "Alibaba-NLP/gte-modernbert-base"
+  },
+  "table": {
+    "all": {
+      "shipped (code view, dense)": {
+        "ndcg_at_10": 0.5975163304697221,
+        "mrr": 0.5649653271592926,
+        "recall_at_100": 0.8740157480314961,
+        "n": 127
+      },
+      "nl view, dense": {
+        "ndcg_at_10": 0.4068174159901718,
+        "mrr": 0.3730277009334634,
+        "recall_at_100": 0.7401574803149606,
+        "n": 127,
+        "diff": -0.19069891447955029,
+        "low": -0.2539245452581708,
+        "high": -0.1286259591320288,
+        "p": 0.0,
+        "significant": true
+      },
+      "multi-view (max of nl, code)": {
+        "ndcg_at_10": 0.5710795564212003,
+        "mrr": 0.5388479189300703,
+        "recall_at_100": 0.8661417322834646,
+        "n": 127,
+        "diff": -0.02643677404852176,
+        "low": -0.052583853804533655,
+        "high": 8.67223039233984e-05,
+        "p": 0.052,
+        "significant": false
+      },
+      "code view + BM25 (RRF)": {
+        "ndcg_at_10": 0.544116445933715,
+        "mrr": 0.48340594085306743,
+        "recall_at_100": 0.8740157480314961,
+        "n": 127,
+        "diff": -0.053399884536007025,
+        "low": -0.09613124725305759,
+        "high": -0.007082915223671877,
+        "p": 0.022,
+        "significant": true
+      }
+    },
+    "pseudo (comments)": {
+      "shipped (code view, dense)": {
+        "ndcg_at_10": 0.5882794062577502,
+        "mrr": 0.5571215992061354,
+        "recall_at_100": 0.8598130841121495,
+        "n": 107
+      },
+      "nl view, dense": {
+        "ndcg_at_10": 0.41631477241101567,
+        "mrr": 0.3805435604654346,
+        "recall_at_100": 0.7102803738317757,
+        "n": 107,
+        "diff": -0.17196463384673458,
+        "low": -0.23920191636385754,
+        "high": -0.10897915650570075,
+        "p": 0.0,
+        "significant": true
+      },
+      "multi-view (max of nl, code)": {
+        "ndcg_at_10": 0.5650233309518277,
+        "mrr": 0.5333610136921654,
+        "recall_at_100": 0.8504672897196262,
+        "n": 107,
+        "diff": -0.02325607530592263,
+        "low": -0.051603997440468515,
+        "high": 0.004206735620389986,
+        "p": 0.102,
+        "significant": false
+      },
+      "code view + BM25 (RRF)": {
+        "ndcg_at_10": 0.530292450818004,
+        "mrr": 0.47435614581208113,
+        "recall_at_100": 0.8598130841121495,
+        "n": 107,
+        "diff": -0.05798695543974626,
+        "low": -0.10171793456997552,
+        "high": -0.017755195758847035,
+        "p": 0.01,
+        "significant": true
+      }
+    },
+    "handwritten": {
+      "shipped (code view, dense)": {
+        "ndcg_at_10": 0.6469338750037715,
+        "mrr": 0.6069292717086835,
+        "recall_at_100": 0.95,
+        "n": 20
+      },
+      "nl view, dense": {
+        "ndcg_at_10": 0.35600655913865714,
+        "mrr": 0.3328178524374176,
+        "recall_at_100": 0.9,
+        "n": 20,
+        "diff": -0.29092731586511433,
+        "low": -0.450014190586014,
+        "high": -0.13860913124459867,
+        "p": 0.0,
+        "significant": true
+      },
+      "multi-view (max of nl, code)": {
+        "ndcg_at_10": 0.6034803626823444,
+        "mrr": 0.568202861952862,
+        "recall_at_100": 0.95,
+        "n": 20,
+        "diff": -0.04345351232142712,
+        "low": -0.09305346522132528,
+        "high": -0.0034661720963303473,
+        "p": 0.0,
+        "significant": true
+      },
+      "code view + BM25 (RRF)": {
+        "ndcg_at_10": 0.6180748198027693,
+        "mrr": 0.5318223443223443,
+        "recall_at_100": 0.95,
+        "n": 20,
+        "diff": -0.028859055201002147,
+        "low": -0.2006712204055691,
+        "high": 0.14333896651765254,
+        "p": 0.772,
+        "significant": false
+      }
+    }
+  },
+  "queries": [
+    {
+      "qid": "p0000",
+      "source": "pseudo",
+      "text": "A weird getter that can look up keys on nested objects but also match keys with dots in their names, eg { 'process.env': { TERM: 'a' } } can be looked up with the key 'process.env.TERM'",
+      "answer": "mock-globals/lib/index.js::get#43",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0001",
+      "source": "pseudo",
+      "text": "Base command for opening urls from a package manifest (bugs, docs, repo)",
+      "answer": "lib/package-url-cmd.js::PackageUrlCommand#7",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "p0002",
+      "source": "pseudo",
+      "text": "Check that all the prereqs are met for provenance generation",
+      "answer": "workspaces/libnpmpublish/lib/publish.js::ensureProvenanceGeneration#173",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0003",
+      "source": "pseudo",
+      "text": "Convert bytes to printable output, for file reporting in tarballs Only supports up to GB because that's way larger than anything the registry supports anyways.",
+      "answer": "lib/utils/format-bytes.js::formatBytes#5",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "p0004",
+      "source": "pseudo",
+      "text": "Create an override to lockdown a file to es6 syntax only and only allow it to require an allowlist of files",
+      "answer": ".eslintrc.local.js::rel#5",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0005",
+      "source": "pseudo",
+      "text": "Create errors with properties to be used in tests",
+      "answer": "test/lib/cli/exit-handler.js::err#145",
+      "shipped_rank": 13
+    },
+    {
+      "qid": "p0006",
+      "source": "pseudo",
+      "text": "FIXME: once we drop support to node10 we can remove this",
+      "answer": "workspaces/arborist/test/edge.js::normalizeNode10compatSnapshots#698",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0007",
+      "source": "pseudo",
+      "text": "Finds where the package is already in the spec and infers saveType from that",
+      "answer": "workspaces/arborist/lib/add-rm-pkg-deps.js::inferSaveType#85",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0008",
+      "source": "pseudo",
+      "text": "Given a node in a tree, return all of the peer dependency sets that it is a part of, with the entry (top or non-peer) edges into the sets identified. With this information, we can determine whether it is appropriate to replace the entire peer set with another (and remove the old one), push the set deeper into the tree, and so on. Returns a Map of { edge => Set(peerNodes) },",
+      "answer": "workspaces/arborist/lib/peer-entry-sets.js::peerEntrySets#11",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0009",
+      "source": "pseudo",
+      "text": "Given a set of nodes in a tree, and a filter function to test incoming edges to the dep set that should be ignored otherwise. find the set of deps that are only depended upon by nodes in the set, or their dependencies, or edges that are ignored. Used when figuring out what to prune when replacing a node with a newer version, or when an optional dep fails to install.",
+      "answer": "workspaces/arborist/lib/gather-dep-set.js::gatherDepSet#10",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0010",
+      "source": "pseudo",
+      "text": "Given an object decribing a dependency graph, this funcion will materialize this dependency graph on disk and in a registry. The input has the following shape: { registry: [ package1, package2,... ], root: { name: <name>, version: <version>, dependencies: <dependencies> } } package# represent a registry package and is of the following shape: { name: <name>, version: <version>, dependencies?: <dependencies> } The return value is of the form { dir, registry } where: - dir is the location on disk of the root package - registry is the url of the registry which has the necessary packages Only simple graphs are currenly supported, the following features will come in further iterations: - lockfile - shinkwrap - bundled dependencies The API of this function is not stable and is likely to evolve as we add more features.",
+      "answer": "workspaces/arborist/test/fixtures/isolated-nock.js::getRepo#148",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0011",
+      "source": "pseudo",
+      "text": "Is the value of a `funding` property of a `package.json` a valid type+url for `npm fund` to display?",
+      "answer": "workspaces/libnpmfund/lib/index.js::isValidFunding#17",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "p0012",
+      "source": "pseudo",
+      "text": "Map an object to an array of nested keys separated by dots { a: 1, b: { c: 2, d: [1] } } => ['a', 'b.c', 'b.d']",
+      "answer": "mock-globals/lib/index.js::getKeys#60",
+      "shipped_rank": 21
+    },
+    {
+      "qid": "p0013",
+      "source": "pseudo",
+      "text": "Note that we have to resetSeenLinks after each exec since otherwise our non-existent file will fail when it gets attempted to get chmod'ed in a real world situation these would happen during different processes where these is no shared cache",
+      "answer": "workspaces/libnpmexec/test/local.js::exec#64",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0014",
+      "source": "pseudo",
+      "text": "Pack a package for publish. Returns a buffer containing a tarball of the package.",
+      "answer": "workspaces/arborist/test/fixtures/isolated-nock.js::packPackage#68",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0015",
+      "source": "pseudo",
+      "text": "Path can be different cases across platform so get the original case of the path before anything is changed XXX: other special cases to handle?",
+      "answer": "mock-globals/lib/index.js::specialCaseKeys#86",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0016",
+      "source": "pseudo",
+      "text": "Private fields are either protected or they can redacted info",
+      "answer": "lib/commands/config.js::isPrivate#81",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0017",
+      "source": "pseudo",
+      "text": "Prompt to open URL in browser if possible",
+      "answer": "lib/utils/open-url.js::openUrlPrompt#55",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0018",
+      "source": "pseudo",
+      "text": "Publish the given package to the given registry.",
+      "answer": "workspaces/arborist/test/fixtures/isolated-nock.js::publishPackage#84",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0019",
+      "source": "pseudo",
+      "text": "Push items in, pop them sorted by depth and then path Sorts physically shallower deps up to the front of the queue, because they'll affect things deeper in, then alphabetical for consistency between installs",
+      "answer": "workspaces/arborist/lib/arborist/build-ideal-tree.js::DepsQueue#55",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0020",
+      "source": "pseudo",
+      "text": "Rearrange arguments and return a function that takes the two arguments returned from the npm-profile methods that take an opener",
+      "answer": "lib/utils/open-url.js::createOpener#91",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0021",
+      "source": "pseudo",
+      "text": "Removes a subkey and warns about it if it's being replaced",
+      "answer": "workspaces/arborist/lib/add-rm-pkg-deps.js::deleteSubKey#106",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0022",
+      "source": "pseudo",
+      "text": "Return the env key if this is a thing that belongs in the env. Ie, if the key isn't a @scope, //nerf.dart, or _private, and the value is a string or array.  Otherwise return false.",
+      "answer": "workspaces/config/lib/set-envs.js::envKey#9",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0023",
+      "source": "pseudo",
+      "text": "Returns the required manifest if the spec is missing from the tree Returns the found node if it is in the tree",
+      "answer": "workspaces/libnpmexec/lib/index.js::missingFromTree#35",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0024",
+      "source": "pseudo",
+      "text": "Returns true if any of the edges from this node has a semver range definition that is an exact match to the version installed e.g: should return true if for a given an installed version 1.0.0, range is either =1.0.0 or 1.0.0",
+      "answer": "workspaces/arborist/lib/arborist/reify.js::exactVersion#1416",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0025",
+      "source": "pseudo",
+      "text": "Run shrinkwrap against a specified prefixDir with config items and make some assertions that should always be true. Sets the results on t.context for use in child tests",
+      "answer": "test/lib/commands/shrinkwrap.js::shrinkwrap#27",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0026",
+      "source": "pseudo",
+      "text": "Run shrinkwrap against all combinations of existing and config lockfile versions",
+      "answer": "test/lib/commands/shrinkwrap.js::shrinkwrapMatrix#51",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0027",
+      "source": "pseudo",
+      "text": "Strips all ANSI C0 and C1 control characters (except for SGR up to 8 bit)",
+      "answer": "lib/utils/format.js::STRIP_C01#16",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0028",
+      "source": "pseudo",
+      "text": "TODO make this real and not a mock",
+      "answer": "test/lib/utils/auth.js::setupOtplease#6",
+      "shipped_rank": 31
+    },
+    {
+      "qid": "p0029",
+      "source": "pseudo",
+      "text": "TODO: output JSON if flatOptions.json is true",
+      "answer": "lib/utils/reify-output.js::reifyOutput#20",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0030",
+      "source": "pseudo",
+      "text": "TODO: we test this condition in the diff command so this error probably doesnt need to be here. Or if it does we should figure out a standard code so we can catch it in the cli and display it consistently",
+      "answer": "workspaces/libnpmdiff/lib/index.js::argsError#11",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0031",
+      "source": "pseudo",
+      "text": "The implementation of commands that are just \"run a script\" restart, start, stop, test",
+      "answer": "lib/lifecycle-cmd.js::LifecycleCmd#5",
+      "shipped_rank": 27
+    },
+    {
+      "qid": "p0032",
+      "source": "pseudo",
+      "text": "This ends up calling run-script(['restart', ...args])",
+      "answer": "lib/commands/restart.js::Restart#4",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0033",
+      "source": "pseudo",
+      "text": "This ends up calling run-script(['start', ...args])",
+      "answer": "lib/commands/start.js::Start#4",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0034",
+      "source": "pseudo",
+      "text": "This ends up calling run-script(['stop', ...args])",
+      "answer": "lib/commands/stop.js::Stop#4",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "p0035",
+      "source": "pseudo",
+      "text": "This ends up calling run-script(['test', ...args])",
+      "answer": "lib/commands/test.js::Test#4",
+      "shipped_rank": 15
+    },
+    {
+      "qid": "p0036",
+      "source": "pseudo",
+      "text": "This file sets what is checked in to node_modules. The root .gitignore file includes node_modules and this file writes an ignore file to node_modules/.gitignore. We ignore everything and then use a query to find all the bundled deps and allow each one of those explicitly. Since node_modules can be nested we have to process each portion of the path and allow it while also ignoring everything inside of it, with the exception of a deps source. We have to do this since everything is ignored by default, and git will not allow a nested path if its parent has not also been allowed. BUT! We also have to ignore other things in those directories.",
+      "answer": "scripts/bundle-and-gitignore-deps.js::main#206",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0037",
+      "source": "pseudo",
+      "text": "This is a slight fib, as it doesn't actually occur during a stat syscall. But file systems are giant piles of lies, so whatever.",
+      "answer": "workspaces/arborist/lib/realpath.js::eloop#57",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0038",
+      "source": "pseudo",
+      "text": "This is an in-memory cache that Pacote uses for packuments. Packuments are usually cached on disk.  This allows for rapid re-requests of the same packument to bypass disk reads.  The tradeoff here is memory usage for disk reads.",
+      "answer": "workspaces/arborist/lib/packument-cache.js::PackumentCache#9",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0039",
+      "source": "pseudo",
+      "text": "This is the base for all commands whose execWorkspaces just gets a list of workspace names and passes it on to new Arborist() to be able to run a filtered Arborist.reify() at some point.",
+      "answer": "lib/arborist-cmd.js::ArboristCmd#7",
+      "shipped_rank": 19
+    },
+    {
+      "qid": "p0040",
+      "source": "pseudo",
+      "text": "This module consumes package data in the following format: { name: String, description: String, maintainers: [{ username: String, email: String }], keywords: String | [String], version: String, date: Date // can be null, } The returned stream will format this package data into a byte stream of formatted, displayable output.",
+      "answer": "lib/utils/format-search-stream.js::filter#19",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0041",
+      "source": "pseudo",
+      "text": "Translates log levels to chalk colors",
+      "answer": "lib/utils/display.js::COLOR_PALETTE#20",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0042",
+      "source": "pseudo",
+      "text": "Utility to extract a buffer out of a stream",
+      "answer": "workspaces/arborist/test/fixtures/isolated-nock.js::StreamToBuffer#9",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0043",
+      "source": "pseudo",
+      "text": "We reimplement a lightweight version of require.resolve because the one that is implemented in nodejs memoizes the resolution which asserts interfering with each others",
+      "answer": "workspaces/arborist/test/isolated-mode.js::resolvePackage#1469",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0044",
+      "source": "pseudo",
+      "text": "XXX: this test has been refactored to use the new mockNpm but it still only asserts the options passed to arborist. TODO: make this really test npm update scenarios",
+      "answer": "test/lib/commands/update.js::mockUpdate#7",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0045",
+      "source": "pseudo",
+      "text": "a more specific helper to call diff against a local package and a registry package and assert the diff output contains the matching strings",
+      "answer": "test/lib/commands/diff.js::assertFoo#90",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "p0046",
+      "source": "pseudo",
+      "text": "annotates _parent and _include metadata into the resulting item obj allowing for filtering out results during output",
+      "answer": "lib/commands/ls.js::augmentItemWithIncludeMetadata#267",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0047",
+      "source": "pseudo",
+      "text": "attempt to open URL in web-browser, print address otherwise:",
+      "answer": "lib/utils/open-url.js::openUrl#26",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "p0048",
+      "source": "pseudo",
+      "text": "basic flattening function, just copy it over camelCase",
+      "answer": "workspaces/config/lib/definitions/definitions.js::flatten#98",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0049",
+      "source": "pseudo",
+      "text": "breaks down a spec \"abbrev@1.1.1\" into different parts for mocking",
+      "answer": "test/fixtures/mock-npm.js::dependencyDetails#359",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0050",
+      "source": "pseudo",
+      "text": "check to make sure that there are no packages newer than or missing from the hidden lockfile",
+      "answer": "workspaces/arborist/lib/shrinkwrap.js::assertNoNewer#130",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0051",
+      "source": "pseudo",
+      "text": "checks if a given node has a direct parent in any of the nodes provided in the compare nodes array",
+      "answer": "workspaces/arborist/lib/query-selector-all.js::hasParent#781",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0052",
+      "source": "pseudo",
+      "text": "compares the inventory of package items in the tree that is about to be installed (idealTree) with the inventory of items stored in the package-lock file (virtualTree) Returns empty array if no errors found or an array populated with an entry for each validation error found.",
+      "answer": "lib/utils/validate-lockfile.js::validateLockfile#7",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0053",
+      "source": "pseudo",
+      "text": "complete against the npm commands if they all resolve to the same thing, just return the thing it already is",
+      "answer": "lib/commands/completion.js::cmdCompl#268",
+      "shipped_rank": 40
+    },
+    {
+      "qid": "p0054",
+      "source": "pseudo",
+      "text": "do all of this in a setup function so that we can call it multiple times for multiple reifies that might be going on. Otherwise, Arborist.reify() is a global action, which is a new constraint we'd be adding with this behavior.",
+      "answer": "workspaces/arborist/lib/signal-handling.js::setup#10",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0055",
+      "source": "pseudo",
+      "text": "don't care about 'from' for edges out",
+      "answer": "workspaces/arborist/lib/printable.js::EdgeOut#147",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0056",
+      "source": "pseudo",
+      "text": "don't care about 'to' for edges in",
+      "answer": "workspaces/arborist/lib/printable.js::EdgeIn#167",
+      "shipped_rank": 11
+    },
+    {
+      "qid": "p0057",
+      "source": "pseudo",
+      "text": "don't print the full node objects because we don't need to track that for this test and it makes the snapshot unnecessarily noisy.",
+      "answer": "workspaces/arborist/test/diff.js::normalizePath#11",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0058",
+      "source": "pseudo",
+      "text": "don't put it in the _cacache folder, just in npm's cache",
+      "answer": "lib/cli/update-notifier.js::lastCheckedFile#17",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0059",
+      "source": "pseudo",
+      "text": "expand with the valid values of various config values. not yet implemented.",
+      "answer": "lib/commands/completion.js::configValueCompl#251",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0060",
+      "source": "pseudo",
+      "text": "expl is an explanation object that comes from Arborist.  It looks like: Depth is how far we want to want to descend into the object making a report. The full report (ie, depth=Infinity) is always written to the cache folder at ${cache}/eresolve-report.txt along with full json.",
+      "answer": "lib/utils/explain-eresolve.js::explain#10",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0061",
+      "source": "pseudo",
+      "text": "extracted from npm v6 lib/install/realize-shrinkwrap-specifier.js",
+      "answer": "workspaces/arborist/lib/spec-from-lock.js::specFromLock#4",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0062",
+      "source": "pseudo",
+      "text": "for comparing nodes to yarn.lock entries",
+      "answer": "workspaces/arborist/lib/shrinkwrap.js::mismatch#16",
+      "shipped_rank": 18
+    },
+    {
+      "qid": "p0063",
+      "source": "pseudo",
+      "text": "for spawn, allow a flat array of arguments where the the last arg can optionally be an options object",
+      "answer": "scripts/util.js::getArgs#43",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0064",
+      "source": "pseudo",
+      "text": "functions for the walk options when we traverse the trees to create the diff tree",
+      "answer": "workspaces/arborist/lib/diff.js::getChildren#178",
+      "shipped_rank": 29
+    },
+    {
+      "qid": "p0065",
+      "source": "pseudo",
+      "text": "generate a full verbose report and tell the user how to fix it",
+      "answer": "lib/utils/explain-eresolve.js::report#47",
+      "shipped_rank": 15
+    },
+    {
+      "qid": "p0066",
+      "source": "pseudo",
+      "text": "generic helper to call diff with a specified dir contents and registry calls",
+      "answer": "test/lib/commands/diff.js::mockDiff#20",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0067",
+      "source": "pseudo",
+      "text": "get a list of available versions of a package filtered to respect --before NOTE: this runs over each node and should not throw",
+      "answer": "workspaces/arborist/lib/query-selector-all.js::getPackageVersions#862",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0068",
+      "source": "pseudo",
+      "text": "given a starting node, what is the *deepest* target where name could go? This is not on the Node class for the simple reason that we sometimes need to check the deepest *potential* target for a Node that is not yet added to the tree where we are checking.",
+      "answer": "workspaces/arborist/lib/deepest-nesting-target.js::deepestNestingTarget#5",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0069",
+      "source": "pseudo",
+      "text": "given a tarball url and a registry url, returns just the relevant pathname portion of it, so that it can be handled elegantly by npm-registry-fetch which only expects pathnames and handles the registry hostname via opts",
+      "answer": "workspaces/libnpmpublish/lib/unpublish.js::getPathname#12",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0070",
+      "source": "pseudo",
+      "text": "handle results for parsed query asts, results are stored in a map that has a key that points to each ast selector node and stores the resulting array of arborist nodes as its value, that is essential to how we handle multiple query selectors, e.g: `#a, #b, #c` <- 3 diff ast selector nodes",
+      "answer": "workspaces/arborist/lib/query-selector-all.js::Results#17",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0071",
+      "source": "pseudo",
+      "text": "helper that retrieves an array of nodes that were potentially updated during the reify process, in order to limit the number of nodes to check and update, only select nodes from the inventory that are direct deps of a given package.json (project root or a workspace) and in ase of using a list of `names`, restrict nodes to only names that are found in this list",
+      "answer": "workspaces/arborist/lib/arborist/reify.js::retrieveUpdatedNodes#1436",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0072",
+      "source": "pseudo",
+      "text": "if it's 1, 2, or 3, set it explicitly that. if undefined or null, set it null otherwise, throw.",
+      "answer": "workspaces/arborist/lib/arborist/index.js::lockfileVersion#55",
+      "shipped_rank": 46
+    },
+    {
+      "qid": "p0073",
+      "source": "pseudo",
+      "text": "if it's a string, quote it.  otherwise, just cast to string.",
+      "answer": "workspaces/config/lib/definitions/definition.js::describeValue#204",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "p0074",
+      "source": "pseudo",
+      "text": "if we're running `npm audit fix`, then we print the full audit report at the end if there's still stuff, because it's silly for `npm audit` to tell you to run `npm audit` for details.  otherwise, use the summary report.  if we get here, we know it's not quiet or json. If the loglevel is silent, then we just run the report to get the exitCode set appropriately.",
+      "answer": "lib/utils/reify-output.js::printAuditReport#107",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "p0075",
+      "source": "pseudo",
+      "text": "ignore the beforeExit handler, since we won't actually let that happen",
+      "answer": "workspaces/arborist/test/arborist/reify.js::once#1484",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0076",
+      "source": "pseudo",
+      "text": "install the older version first",
+      "answer": "workspaces/arborist/test/arborist/reify.js::lock#1451",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0077",
+      "source": "pseudo",
+      "text": "minimatch wants forward slashes only for glob patterns",
+      "answer": "lib/utils/get-workspaces.js::globify#7",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0078",
+      "source": "pseudo",
+      "text": "normalize line endings (for ini)",
+      "answer": "test/fixtures/clean-snapshot.js::cleanNewlines#4",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "p0079",
+      "source": "pseudo",
+      "text": "now make sure it actually did clean up everything",
+      "answer": "workspaces/arborist/test/fixtures/cleanup.js::readdir#8",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0080",
+      "source": "pseudo",
+      "text": "now we're in the \"oh no, a duplicate\" mode.  make sure that we can dedupe out of it through any of these reasonable approaches.",
+      "answer": "workspaces/arborist/test/arborist/build-ideal-tree.js::check#2877",
+      "shipped_rank": 16
+    },
+    {
+      "qid": "p0081",
+      "source": "pseudo",
+      "text": "npm explore <pkg>[@<version>] open a subshell to the package folder.",
+      "answer": "lib/commands/explore.js::Explore#10",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0082",
+      "source": "pseudo",
+      "text": "npm install-ci-test Runs `npm ci` and then runs `npm test`",
+      "answer": "lib/commands/install-ci-test.js::InstallCITest#5",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0083",
+      "source": "pseudo",
+      "text": "npm install-test Runs `npm install` and then runs `npm test`",
+      "answer": "lib/commands/install-test.js::InstallTest#5",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0084",
+      "source": "pseudo",
+      "text": "packPackageToStream Uses 'tar-stream' to create the tar stream without touching the file system.",
+      "answer": "workspaces/arborist/test/fixtures/isolated-nock.js::packPackageToStream#30",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "p0085",
+      "source": "pseudo",
+      "text": "placing a dep is actually a tree of placing the dep itself and all of its peer group that aren't already met by the tree",
+      "answer": "workspaces/arborist/lib/arborist/build-ideal-tree.js::depth#936",
+      "shipped_rank": 8
+    },
+    {
+      "qid": "p0086",
+      "source": "pseudo",
+      "text": "print an error or just nothing if the audit report has an error this is called by the audit command, and by the reify-output util prints a JSON version of the error if it's --json returns 'true' if there was an error, false otherwise",
+      "answer": "lib/utils/audit-error.js::auditError#9",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0087",
+      "source": "pseudo",
+      "text": "public method TODO remove options param in next semver major",
+      "answer": "workspaces/arborist/lib/arborist/load-actual.js::loadActual#59",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0088",
+      "source": "pseudo",
+      "text": "return a test function that builds up the mock and snapshots output",
+      "answer": "test/lib/utils/reify-output.js::testCase#291",
+      "shipped_rank": 29
+    },
+    {
+      "qid": "p0089",
+      "source": "pseudo",
+      "text": "return true if we should audit this one",
+      "answer": "workspaces/arborist/lib/audit-report.js::shouldAudit#357",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0090",
+      "source": "pseudo",
+      "text": "returns a simplified tarball when reading files from node_modules folder, thus avoiding running the prepare scripts and the extra logic from packlist",
+      "answer": "workspaces/libnpmdiff/lib/tarball.js::nodeModulesTarball#12",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0091",
+      "source": "pseudo",
+      "text": "see if the package.json at `path` has an entry that matches `cmd`",
+      "answer": "workspaces/libnpmexec/lib/index.js::hasPkgBin#81",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0092",
+      "source": "pseudo",
+      "text": "set the parentage in the leave step so that we aren't attaching child nodes only to remove them later.  also bubble up the unchanged nodes so that we can move them out of staging in the reification step.",
+      "answer": "workspaces/arborist/lib/diff.js::leave#295",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0093",
+      "source": "pseudo",
+      "text": "since mock npm changes directories it can be hard to figure out the correct path to mock something with tap since the directory will change before/after npm is loaded. This helper replaces {BIN} and {LIB} with the absolute path to those directories",
+      "answer": "test/fixtures/tmock.js::replace#11",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0094",
+      "source": "pseudo",
+      "text": "some utils that we use in a bunch of tests",
+      "answer": "workspaces/arborist/test/fixtures/utils.js::normalizePath#3",
+      "shipped_rank": null
+    },
+    {
+      "qid": "p0095",
+      "source": "pseudo",
+      "text": "sometimes resolved: is weird or broken, or something npa can't handle",
+      "answer": "workspaces/arborist/lib/shrinkwrap.js::specFromResolved#72",
+      "shipped_rank": 9
+    },
+    {
+      "qid": "p0096",
+      "source": "pseudo",
+      "text": "sort a key/value object into a string of JSON stringified keys and vals",
+      "answer": "workspaces/arborist/lib/yarn-lock.js::sortKV#70",
+      "shipped_rank": 15
+    },
+    {
+      "qid": "p0097",
+      "source": "pseudo",
+      "text": "strip the fixtures path off of the trees in snapshots",
+      "answer": "workspaces/arborist/test/arborist/load-actual.js::pp#16",
+      "shipped_rank": 14
+    },
+    {
+      "qid": "p0098",
+      "source": "pseudo",
+      "text": "supports object funding and string shorthand, or an array of these if original was an array, returns an array; else returns the lone item",
+      "answer": "workspaces/libnpmfund/lib/index.js::normalizeFunding#8",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0099",
+      "source": "pseudo",
+      "text": "take an array of `[key, value, k2=v2, k3, v3, ...]` and turn into { key: value, k2: v2, k3: v3 }",
+      "answer": "lib/commands/config.js::keyValues#44",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0100",
+      "source": "pseudo",
+      "text": "test helper that spits out pkgid for readability and deduplicates link/target from results",
+      "answer": "workspaces/arborist/test/query-selector-all.js::querySelectorAll#11",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0101",
+      "source": "pseudo",
+      "text": "these scripts should be kept in sync so this tests the contents of each and does a diff to ensure the only differences between them are necessary",
+      "answer": "test/bin/windows-shims.js::diffFiles#27",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0102",
+      "source": "pseudo",
+      "text": "typically a short walk, since it only traverses deps that have the flag set.",
+      "answer": "workspaces/arborist/lib/calc-dep-flags.js::unsetFlag#97",
+      "shipped_rank": 5
+    },
+    {
+      "qid": "p0103",
+      "source": "pseudo",
+      "text": "use sha1 because it's faster, and collisions extremely unlikely anyway",
+      "answer": "workspaces/arborist/lib/retire-path.js::pathSafeHash#5",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0104",
+      "source": "pseudo",
+      "text": "use the defined flattening function, and copy over any scoped registries and registry-specific \"nerfdart\" configs verbatim TODO: make these getters so that we only have to make dirty the thing that changed, and then flatten the fields that could have changed when a config.set is called. TODO: move nerfdart auth stuff into a nested object that is only passed along to paths that end up calling npm-registry-fetch.",
+      "answer": "workspaces/config/lib/definitions/index.js::flatten#12",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0105",
+      "source": "pseudo",
+      "text": "we should try to print patches as long as the extension is not identified as binary files",
+      "answer": "workspaces/libnpmdiff/lib/should-print-patch.js::shouldPrintPatch#7",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "p0106",
+      "source": "pseudo",
+      "text": "yes, yes, the actual process.kill doesn't return a promise, but we need to know when this async action is done to know when to continue on to other parts of the test.",
+      "answer": "workspaces/arborist/test/signal-handling.js::kill#17",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "h00",
+      "source": "handwritten",
+      "text": "suggest the closest command when the user mistypes one",
+      "answer": "lib/utils/did-you-mean.js::didYouMean#9",
+      "shipped_rank": 14
+    },
+    {
+      "qid": "h01",
+      "source": "handwritten",
+      "text": "turn a number of bytes into a human readable size like 1.2 kB",
+      "answer": "lib/utils/format-bytes.js::formatBytes#5",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h02",
+      "source": "handwritten",
+      "text": "work out the process exit code from an error object",
+      "answer": "lib/utils/error-message.js::getExitCodeFromError#366",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h03",
+      "source": "handwritten",
+      "text": "retry the registry request with a one-time password when two-factor auth is required",
+      "answer": "lib/utils/auth.js::otplease#6",
+      "shipped_rank": 8
+    },
+    {
+      "qid": "h04",
+      "source": "handwritten",
+      "text": "stamp the node and npm versions into the manifest before it is published",
+      "answer": "workspaces/libnpmpublish/lib/publish.js::patchManifest#65",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "h05",
+      "source": "handwritten",
+      "text": "walk up parent folders looking for a node_modules/.bin that contains the executable",
+      "answer": "workspaces/libnpmexec/lib/file-exists.js::localFileExists#14",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "h06",
+      "source": "handwritten",
+      "text": "decide which executable to run from a package's bin entries",
+      "answer": "workspaces/libnpmexec/lib/get-bin-from-manifest.js::getBinFromManifest#1",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h07",
+      "source": "handwritten",
+      "text": "skip binary files when printing the diff between two package versions",
+      "answer": "workspaces/libnpmdiff/lib/should-print-patch.js::shouldPrintPatch#7",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h08",
+      "source": "handwritten",
+      "text": "reject anything that is not an http or https link before opening it in the browser",
+      "answer": "lib/utils/open-url.js::assertValidUrl#7",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h09",
+      "source": "handwritten",
+      "text": "prompt for a password without echoing it to the terminal",
+      "answer": "lib/utils/read-user-info.js::readPassword#25",
+      "shipped_rank": 4
+    },
+    {
+      "qid": "h10",
+      "source": "handwritten",
+      "text": "compare the lockfile versions with the resolved dependency tree and report mismatches",
+      "answer": "lib/utils/validate-lockfile.js::validateLockfile#7",
+      "shipped_rank": 2
+    },
+    {
+      "qid": "h11",
+      "source": "handwritten",
+      "text": "build the SPDX identifier for a package in the software bill of materials",
+      "answer": "lib/utils/sbom-spdx.js::toSpdxID#156",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h12",
+      "source": "handwritten",
+      "text": "tell the user how many installed packages are asking for donations",
+      "answer": "lib/utils/reify-output.js::packagesFundingMessage#187",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h13",
+      "source": "handwritten",
+      "text": "work out which dependency types to leave out from the production, include and omit flags",
+      "answer": "workspaces/config/lib/definitions/definitions.js::buildOmitList#22",
+      "shipped_rank": 3
+    },
+    {
+      "qid": "h14",
+      "source": "handwritten",
+      "text": "should this dependency be included in the security audit",
+      "answer": "workspaces/arborist/lib/audit-report.js::shouldAudit#357",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h15",
+      "source": "handwritten",
+      "text": "check that a provenance attestation matches the package being published",
+      "answer": "workspaces/libnpmpublish/lib/provenance.js::verifyProvenance#199",
+      "shipped_rank": 1
+    },
+    {
+      "qid": "h16",
+      "source": "handwritten",
+      "text": "print one dependency link with its version range for npm explain",
+      "answer": "lib/utils/explain-dep.js::explainEdge#78",
+      "shipped_rank": null
+    },
+    {
+      "qid": "h17",
+      "source": "handwritten",
+      "text": "is the package npx was asked to run already installed, or does it need fetching",
+      "answer": "workspaces/libnpmexec/lib/index.js::missingFromTree#35",
+      "shipped_rank": 20
+    },
+    {
+      "qid": "h18",
+      "source": "handwritten",
+      "text": "normalise path separators and drop a leading ./ from file patterns",
+      "answer": "workspaces/libnpmdiff/lib/untar.js::normalizeMatch#4",
+      "shipped_rank": 17
+    },
+    {
+      "qid": "h19",
+      "source": "handwritten",
+      "text": "tab-complete folder names that contain a package.json for npm install",
+      "answer": "lib/commands/install.js::completion#43",
+      "shipped_rank": 1
+    }
+  ]
+}

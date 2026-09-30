@@ -1,0 +1,116 @@
+{
+ "documents": 8765,
+ "long_documents": 69,
+ "windows": 441,
+ "max_windows": 161,
+ "encode_seconds": 556.9,
+ "tercile_cut_tokens": 207,
+ "groups": {
+  "sample": {
+   "queries": 1000,
+   "plain": 0.5088941907824583,
+   "plain + windows": 0.5089234829094069,
+   "shipped": 0.5496223809698692,
+   "shipped + windows": 0.5516604949734727,
+   "shipped_vs": {
+    "diff": 0.002038114003603568,
+    "low": 6.86215613240666e-05,
+    "high": 0.0049809824372676025,
+    "p": 0.022,
+    "significant": true
+   },
+   "plain_vs": {
+    "diff": 2.9292126948601117e-05,
+    "low": -0.001884851895202519,
+    "high": 0.002904635368040541,
+    "p": 1.0,
+    "significant": false
+   }
+  },
+  "full": {
+   "queries": 3765,
+   "plain": 0.5043424185160309,
+   "plain + windows": 0.5042857019260367,
+   "shipped": 0.5393486381784062,
+   "shipped + windows": 0.5400429671215256,
+   "shipped_vs": {
+    "diff": 0.000694328943119383,
+    "low": -0.00026612512627293886,
+    "high": 0.0016902313444153512,
+    "p": 0.146,
+    "significant": false
+   },
+   "plain_vs": {
+    "diff": -5.671658999414095e-05,
+    "low": -0.0011938114571416255,
+    "high": 0.0010561920282136897,
+    "p": 0.918,
+    "significant": false
+   }
+  },
+  "held-out": {
+   "queries": 2765,
+   "plain": 0.5026962079314279,
+   "plain + windows": 0.5026083851146913,
+   "shipped": 0.5356329988324883,
+   "shipped + windows": 0.535841329562051,
+   "shipped_vs": {
+    "diff": 0.00020833072956271558,
+    "low": -0.0008553180331119876,
+    "high": 0.0011903439805870902,
+    "p": 0.706,
+    "significant": false
+   },
+   "plain_vs": {
+    "diff": -8.782281673654314e-05,
+    "low": -0.0014012485672805584,
+    "high": 0.0013229083628167621,
+    "p": 0.87,
+    "significant": false
+   }
+  },
+  "long-document tercile": {
+   "queries": 1259,
+   "plain": 0.4938407680495853,
+   "plain + windows": 0.4955634598770325,
+   "shipped": 0.505063490506563,
+   "shipped + windows": 0.5069442856934127,
+   "shipped_vs": {
+    "diff": 0.0018807951868496822,
+    "low": -0.0009061432977157376,
+    "high": 0.004810607288148791,
+    "p": 0.204,
+    "significant": false
+   },
+   "plain_vs": {
+    "diff": 0.0017226918274471838,
+    "low": -0.0011212484084498647,
+    "high": 0.004978618518384736,
+    "p": 0.27,
+    "significant": false
+   }
+  },
+  "gold is long (windowed)": {
+   "queries": 28,
+   "plain": 0.2470647678126026,
+   "plain + windows": 0.3888908477324778,
+   "shipped": 0.19132329812925583,
+   "shipped + windows": 0.2680359070438244,
+   "shipped_vs": {
+    "diff": 0.07671260891456859,
+    "low": -0.03237491001950123,
+    "high": 0.1943051454506772,
+    "p": 0.17,
+    "significant": false
+   },
+   "plain_vs": {
+    "diff": 0.14182607991987517,
+    "low": 0.0349130063170077,
+    "high": 0.27714282338223234,
+    "p": 0.006,
+    "significant": true
+   }
+  }
+ },
+ "seconds": 603.2
+}

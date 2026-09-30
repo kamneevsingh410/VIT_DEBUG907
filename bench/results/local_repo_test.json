@@ -1,0 +1,317 @@
+[
+ {
+  "repo": "dsa-recommendation",
+  "scan": {
+   "seconds": 1.6,
+   "files_indexed": 116,
+   "snippets": 1273,
+   "languages": {
+    "python": 116
+   },
+   "skipped_dirs": {
+    "caches and tooling": 22,
+    "hidden directory": 5,
+    "virtual environment": 1
+   },
+   "skipped_files": {
+    "secret file": 1,
+    "not source code (docs, data, lockfiles, notebooks)": 80
+   },
+   "skipped_snippets": {}
+  },
+  "index": {
+   "seconds": 817.1,
+   "snippets": 1273,
+   "vectors_new": 1233,
+   "texts_through_model": 1233,
+   "texts_from_cache": 0,
+   "db_mb": 12.0
+  },
+  "auto": {
+   "python_docstrings": {
+    "with_docstring": 306,
+    "too_short": 9,
+    "leaked": 104,
+    "kept": 193
+   },
+   "js_comments": {
+    "functions": 1273,
+    "with_comment": 0,
+    "too_short": 0,
+    "leaked": 0,
+    "duplicate_text": 0,
+    "kept": 0
+   },
+   "function_level": {
+    "n": 193,
+    "top1": 0.37305699481865284,
+    "top3": 0.6113989637305699,
+    "top10": 0.7564766839378239,
+    "mrr": 0.5122314493433695
+   },
+   "file_level": {
+    "n": 193,
+    "top1": 0.5544041450777202,
+    "top3": 0.8238341968911918,
+    "top10": 0.9378238341968912,
+    "mrr": 0.7013783589332203
+   },
+   "query_ms_p50": 2.033500000834465
+  },
+  "manual": {
+   "n": 8,
+   "top1": 0.375,
+   "top3": 0.875,
+   "top10": 0.875,
+   "mrr": 0.5703125
+  },
+  "manual_ranks": [
+   3,
+   1,
+   3,
+   3,
+   1,
+   16,
+   2,
+   1
+  ],
+  "uses": {
+   "lines": 87,
+   "files": 5,
+   "ms": 137
+  },
+  "calls": {
+   "functions": 24,
+   "ms": 205
+  },
+  "versions": {
+   "commits_apart": 20,
+   "old": {
+    "snippets": 1035,
+    "seconds": 112.7,
+    "vectors_new": 1004
+   },
+   "new": {
+    "snippets": 1273,
+    "seconds": 6.9,
+    "vectors_new": 314,
+    "vectors_reused": 954,
+    "texts_through_model": 0
+   },
+   "tool": {
+    "exit": 0,
+    "listed_versions": true,
+    "switched_to_old": true,
+    "all_versions": true,
+    "collapse_off": [
+     9,
+     10
+    ],
+    "collapse_on": [
+     10,
+     10
+    ],
+    "errors": 0
+   },
+   "scratch_deleted": true,
+   "worktree_vs_head": {
+    "deleted": 0,
+    "modified": 0,
+    "untracked": 5,
+    "other": 0
+   }
+  },
+  "tests_hidden": {
+   "manual": {
+    "shown": {
+     "n": 8,
+     "top1": 0.375,
+     "top3": 0.875,
+     "top10": 0.875,
+     "mrr": 0.5703125
+    },
+    "hidden": {
+     "n": 8,
+     "top1": 0.625,
+     "top3": 0.875,
+     "top10": 1.0,
+     "mrr": 0.7430555555555556
+    }
+   },
+   "auto_non_test": {
+    "shown": {
+     "n": 142,
+     "top1": 0.5985915492957746,
+     "top3": 0.8450704225352113,
+     "top10": 0.9507042253521126,
+     "mrr": 0.72879793328737
+    },
+    "hidden": {
+     "n": 142,
+     "top1": 0.6690140845070423,
+     "top3": 0.8732394366197183,
+     "top10": 0.971830985915493,
+     "mrr": 0.7820646880506036
+    }
+   }
+  }
+ },
+ {
+  "repo": "dsa-website",
+  "scan": {
+   "seconds": 0.8,
+   "files_indexed": 141,
+   "snippets": 469,
+   "languages": {
+    "typescript": 124,
+    "javascript": 3,
+    "python": 14
+   },
+   "skipped_dirs": {
+    "caches and tooling": 1,
+    "build output": 1,
+    "hidden directory": 1,
+    "vendored dependencies": 1
+   },
+   "skipped_files": {
+    "secret file": 2,
+    "not source code (docs, data, lockfiles, notebooks)": 97
+   },
+   "skipped_snippets": {}
+  },
+  "index": {
+   "seconds": 398.8,
+   "snippets": 469,
+   "vectors_new": 466,
+   "texts_through_model": 466,
+   "texts_from_cache": 0,
+   "db_mb": 5.1
+  },
+  "auto": {
+   "python_docstrings": {
+    "leaked": 0,
+    "kept": 0
+   },
+   "js_comments": {
+    "functions": 469,
+    "with_comment": 93,
+    "too_short": 26,
+    "leaked": 5,
+    "duplicate_text": 0,
+    "kept": 62
+   },
+   "function_level": {
+    "n": 62,
+    "top1": 0.6935483870967742,
+    "top3": 0.9032258064516129,
+    "top10": 0.9354838709677419,
+    "mrr": 0.7939258173129141
+   },
+   "file_level": {
+    "n": 62,
+    "top1": 0.7580645161290323,
+    "top3": 0.9516129032258065,
+    "top10": 1.0,
+    "mrr": 0.8478494623655914
+   },
+   "query_ms_p50": 1.6767999914009124
+  },
+  "manual": {
+   "n": 8,
+   "top1": 0.875,
+   "top3": 1.0,
+   "top10": 1.0,
+   "mrr": 0.9166666666666666
+  },
+  "manual_ranks": [
+   1,
+   1,
+   3,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "uses": {
+   "lines": 39,
+   "files": 4,
+   "ms": 87
+  },
+  "calls": {
+   "functions": 1,
+   "ms": 121
+  },
+  "versions": {
+   "commits_apart": 20,
+   "old": {
+    "snippets": 316,
+    "seconds": 206.5,
+    "vectors_new": 315
+   },
+   "new": {
+    "snippets": 569,
+    "seconds": 175.1,
+    "vectors_new": 433,
+    "vectors_reused": 135,
+    "texts_through_model": 160
+   },
+   "tool": {
+    "exit": 0,
+    "listed_versions": true,
+    "switched_to_old": true,
+    "all_versions": true,
+    "collapse_off": [
+     10,
+     10
+    ],
+    "collapse_on": [
+     10,
+     10
+    ],
+    "errors": 0
+   },
+   "scratch_deleted": true,
+   "worktree_vs_head": {
+    "deleted": 95,
+    "modified": 19,
+    "untracked": 13,
+    "other": 0
+   }
+  },
+  "tests_hidden": {
+   "manual": {
+    "shown": {
+     "n": 8,
+     "top1": 0.875,
+     "top3": 1.0,
+     "top10": 1.0,
+     "mrr": 0.9166666666666666
+    },
+    "hidden": {
+     "n": 8,
+     "top1": 0.875,
+     "top3": 1.0,
+     "top10": 1.0,
+     "mrr": 0.9166666666666666
+    }
+   },
+   "auto_non_test": {
+    "shown": {
+     "n": 62,
+     "top1": 0.7580645161290323,
+     "top3": 0.9516129032258065,
+     "top10": 1.0,
+     "mrr": 0.8478494623655914
+    },
+    "hidden": {
+     "n": 62,
+     "top1": 0.7580645161290323,
+     "top3": 0.9516129032258065,
+     "top10": 1.0,
+     "mrr": 0.8478494623655914
+    }
+   }
+  }
+ }
+]

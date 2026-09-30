@@ -1,0 +1,298 @@
+{
+ "safety": {
+  "test": 3765,
+  "test_routed": [],
+  "sample": 1000,
+  "sample_routed": [],
+  "train": 5000,
+  "train_routed": []
+ },
+ "npm": [
+  {
+   "question": "where is otplease used",
+   "expected": "usage",
+   "got": {
+    "kind": "usage",
+    "names": [
+     "otplease"
+    ],
+    "hits": 19,
+    "order": "before",
+    "paths": [
+     "lib/commands/access.js",
+     "lib/commands/deprecate.js",
+     "lib/commands/dist-tag.js",
+     "lib/commands/hook.js",
+     "lib/commands/org.js",
+     "lib/commands/owner.js",
+     "lib/commands/profile.js",
+     "lib/commands/publish.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "who calls getCredentialsByURI",
+   "expected": "callers",
+   "got": {
+    "kind": "callers",
+    "names": [
+     "getCredentialsByURI"
+    ],
+    "hits": 5,
+    "order": "before",
+    "paths": [
+     "lib/commands/adduser.js",
+     "lib/commands/login.js",
+     "lib/commands/profile.js",
+     "lib/commands/publish.js",
+     "lib/utils/get-identity.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "where is the reify finish helper defined",
+   "expected": "definition",
+   "got": {
+    "kind": "definition",
+    "names": [
+     "reifyFinish"
+    ],
+    "hits": 2,
+    "order": "before",
+    "paths": [
+     "lib/utils/reify-finish.js",
+     "test/lib/utils/reify-finish.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "where is validateLockfile defined",
+   "expected": "definition",
+   "got": {
+    "kind": "definition",
+    "names": [
+     "validateLockfile"
+    ],
+    "hits": 2,
+    "order": "before",
+    "paths": [
+     "lib/utils/validate-lockfile.js",
+     "test/lib/utils/validate-lockfile.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "which functions call reify before reifyFinish",
+   "expected": "order",
+   "got": {
+    "kind": "order",
+    "names": [
+     "reify",
+     "reifyFinish"
+    ],
+    "hits": 7,
+    "order": "before",
+    "paths": [
+     "lib/commands/ci.js",
+     "lib/commands/install.js",
+     "lib/commands/link.js",
+     "lib/commands/uninstall.js",
+     "lib/commands/update.js",
+     "lib/utils/update-workspaces.js"
+    ],
+    "others": 1
+   },
+   "correct": true
+  },
+  {
+   "question": "does loadActual get called before buildIdealTree",
+   "expected": "order",
+   "got": {
+    "kind": "order",
+    "names": [
+     "loadActual",
+     "buildIdealTree"
+    ],
+    "hits": 1,
+    "order": "before",
+    "paths": [
+     "workspaces/arborist/lib/arborist/index.js"
+    ],
+    "others": 1
+   },
+   "correct": true
+  },
+  {
+   "question": "what calls the load actual function",
+   "expected": "callers",
+   "got": {
+    "kind": "callers",
+    "names": [
+     "loadActual"
+    ],
+    "hits": 35,
+    "order": "before",
+    "paths": [
+     "lib/commands/audit.js",
+     "lib/commands/diff.js",
+     "lib/commands/explain.js",
+     "lib/commands/fund.js",
+     "lib/commands/link.js",
+     "lib/commands/ls.js",
+     "lib/commands/outdated.js",
+     "lib/commands/query.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "where is buildIdealTree implemented",
+   "expected": "definition",
+   "got": {
+    "kind": "definition",
+    "names": [
+     "buildIdealTree"
+    ],
+    "hits": 1,
+    "order": "before",
+    "paths": [
+     "workspaces/arborist/lib/arborist/build-ideal-tree.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "where is \"https://registry.npmjs.org/\" used",
+   "expected": "usage",
+   "got": {
+    "kind": "usage",
+    "names": [
+     "https://registry.npmjs.org/"
+    ],
+    "hits": 2243,
+    "order": "before",
+    "paths": [
+     "test/fixtures/mock-npm.js",
+     "test/lib/commands/audit.js",
+     "test/lib/commands/ci.js",
+     "test/lib/commands/exec.js",
+     "test/lib/commands/logout.js",
+     "test/lib/commands/ping.js",
+     "test/lib/commands/publish.js",
+     "test/lib/utils/sbom-cyclonedx.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "how does npm decide that an installed package is outdated",
+   "expected": "search",
+   "got": {
+    "kind": "search",
+    "names": [],
+    "hits": null,
+    "paths": []
+   },
+   "correct": true
+  },
+  {
+   "question": "where is the npm registry fetch module used",
+   "expected": "usage",
+   "got": {
+    "kind": "usage",
+    "names": [
+     "npm-registry-fetch"
+    ],
+    "hits": 15,
+    "order": "before",
+    "paths": [
+     "lib/utils/get-identity.js",
+     "lib/utils/ping.js",
+     "test/lib/commands/dist-tag.js",
+     "test/lib/commands/stars.js",
+     "workspaces/config/lib/definitions/definitions.js",
+     "workspaces/libnpmhook/lib/index.js",
+     "workspaces/libnpmorg/lib/index.js",
+     "workspaces/libnpmteam/test/index.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  },
+  {
+   "question": "which files call validateLockfile before reifyFinish",
+   "expected": "order",
+   "got": {
+    "kind": "order",
+    "names": [
+     "validateLockfile",
+     "reifyFinish"
+    ],
+    "hits": 1,
+    "order": "before",
+    "paths": [
+     "lib/commands/ci.js"
+    ],
+    "others": 0
+   },
+   "correct": true
+  }
+ ],
+ "knode": [
+  {
+   "repo": "dsa-recommendation",
+   "questions": 3,
+   "correct": 3,
+   "rows": [
+    {
+     "kind": "definition",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    },
+    {
+     "kind": "callers",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    },
+    {
+     "kind": "usage",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    }
+   ]
+  },
+  {
+   "repo": "dsa-website",
+   "questions": 3,
+   "correct": 3,
+   "rows": [
+    {
+     "kind": "definition",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    },
+    {
+     "kind": "callers",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    },
+    {
+     "kind": "usage",
+     "resolved_to_the_right_name": true,
+     "answer_nonempty": true
+    }
+   ]
+  }
+ ]
+}

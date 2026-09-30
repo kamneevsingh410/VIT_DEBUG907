@@ -1,0 +1,253 @@
+{
+  "rows": [
+    {
+      "label": "BM25 only, no encoder",
+      "group": "control",
+      "ndcg_at_10": 0.00527,
+      "mrr": 0.00546,
+      "recall_at_100": 0.061,
+      "queries": 1000,
+      "setup_s": 5.6
+    },
+    {
+      "label": "BM25 only, enriched + preprocessed",
+      "group": "control",
+      "ndcg_at_10": 0.03129,
+      "mrr": 0.02622,
+      "recall_at_100": 0.117,
+      "queries": 1000,
+      "setup_s": 5.6
+    },
+    {
+      "label": "granite-embedding-english-r2, fp32",
+      "group": "encoder",
+      "ndcg_at_10": 0.12753,
+      "mrr": 0.11669,
+      "recall_at_100": 0.37,
+      "queries": 1000,
+      "setup_s": 5.7
+    },
+    {
+      "label": "jina-v2-base-code, int8",
+      "group": "encoder",
+      "ndcg_at_10": 0.11166,
+      "mrr": 0.09946,
+      "recall_at_100": 0.359,
+      "queries": 1000,
+      "setup_s": 5.7
+    },
+    {
+      "label": "jina-v2-base-code, fp32",
+      "group": "encoder",
+      "ndcg_at_10": 0.14343,
+      "mrr": 0.12731,
+      "recall_at_100": 0.432,
+      "queries": 1000,
+      "setup_s": 5.6
+    },
+    {
+      "label": "gte-modernbert-base, fp32  [SHIPPED]",
+      "group": "encoder",
+      "ndcg_at_10": 0.49059,
+      "mrr": 0.45062,
+      "recall_at_100": 0.863,
+      "queries": 1000,
+      "setup_s": 5.5
+    },
+    {
+      "label": "+ interaction rerank",
+      "group": "pipeline",
+      "ndcg_at_10": 0.47824,
+      "mrr": 0.43326,
+      "recall_at_100": 0.863,
+      "queries": 1000,
+      "setup_s": 5.4
+    },
+    {
+      "label": "+ BM25 fusion (RRF, w=0.15)",
+      "group": "pipeline",
+      "ndcg_at_10": 0.46343,
+      "mrr": 0.41457,
+      "recall_at_100": 0.863,
+      "queries": 1000,
+      "setup_s": 5.4
+    },
+    {
+      "label": "+ BM25 fusion (RRF, w=0.30)",
+      "group": "pipeline",
+      "ndcg_at_10": 0.44805,
+      "mrr": 0.39392,
+      "recall_at_100": 0.863,
+      "queries": 1000,
+      "setup_s": 5.5
+    },
+    {
+      "label": "+ rerank, candidate pool 500",
+      "group": "pipeline",
+      "ndcg_at_10": 0.47824,
+      "mrr": 0.43268,
+      "recall_at_100": 0.837,
+      "queries": 1000,
+      "setup_s": 5.4
+    },
+    {
+      "label": "query: strip -----Input----- sections",
+      "group": "query",
+      "ndcg_at_10": 0.23079,
+      "mrr": 0.20869,
+      "recall_at_100": 0.572,
+      "queries": 1000,
+      "setup_s": 5.5
+    },
+    {
+      "label": "query: embed processed tokens, not raw",
+      "group": "query",
+      "ndcg_at_10": 0.08551,
+      "mrr": 0.07578,
+      "recall_at_100": 0.295,
+      "queries": 1000,
+      "setup_s": 5.4
+    },
+    {
+      "label": "document view: nl instead of code  [SLOW]",
+      "group": "document",
+      "ndcg_at_10": 0.04831,
+      "mrr": 0.04453,
+      "recall_at_100": 0.165,
+      "queries": 1000,
+      "setup_s": 554.5
+    },
+    {
+      "label": "document view: multi-view max  [SLOW]",
+      "group": "document",
+      "ndcg_at_10": 0.49057,
+      "mrr": 0.45057,
+      "recall_at_100": 0.864,
+      "queries": 1000,
+      "setup_s": 8.1
+    },
+    {
+      "label": "sequence length 1024  [SLOW]",
+      "group": "document",
+      "ndcg_at_10": 0.50922,
+      "mrr": 0.46777,
+      "recall_at_100": 0.879,
+      "queries": 1000,
+      "setup_s": 2431.2
+    }
+  ],
+  "vs_shipped": [
+    {
+      "label": "BM25 only, no encoder",
+      "diff": -0.4853147256199542,
+      "low": -0.5109491178887064,
+      "high": -0.45965045227594287,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "BM25 only, enriched + preprocessed",
+      "diff": -0.459296276938742,
+      "low": -0.4849227882030209,
+      "high": -0.43452332290628615,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "granite-embedding-english-r2, fp32",
+      "diff": -0.3630561363299469,
+      "low": -0.38702549602182296,
+      "high": -0.33676814358227236,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "jina-v2-base-code, int8",
+      "diff": -0.37892535443536596,
+      "low": -0.40241226099371097,
+      "high": -0.3532648960276237,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "jina-v2-base-code, fp32",
+      "diff": -0.3471620998434732,
+      "low": -0.3730255146076822,
+      "high": -0.32041047072088935,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "+ interaction rerank",
+      "diff": -0.01234882900736864,
+      "low": -0.019146961257324718,
+      "high": -0.005409257849258794,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "+ BM25 fusion (RRF, w=0.15)",
+      "diff": -0.02716250357121372,
+      "low": -0.0359363078067445,
+      "high": -0.0163497697622019,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "+ BM25 fusion (RRF, w=0.30)",
+      "diff": -0.042537628236292084,
+      "low": -0.05392986008302064,
+      "high": -0.030101060469512844,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "+ rerank, candidate pool 500",
+      "diff": -0.01234882900736864,
+      "low": -0.019146961257324718,
+      "high": -0.005409257849258794,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "query: strip -----Input----- sections",
+      "diff": -0.2598002292752278,
+      "low": -0.2819593320303303,
+      "high": -0.23555762543286612,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "query: embed processed tokens, not raw",
+      "diff": -0.4050747959882105,
+      "low": -0.42880678925125426,
+      "high": -0.378470440916266,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "document view: nl instead of code  [SLOW]",
+      "diff": -0.4422799444694423,
+      "low": -0.4668606616169694,
+      "high": -0.41563662767580056,
+      "p": 0.0,
+      "significant": true
+    },
+    {
+      "label": "document view: multi-view max  [SLOW]",
+      "diff": -2.287385377468887e-05,
+      "low": -6.86215613240666e-05,
+      "high": 0.0,
+      "p": 0.0,
+      "significant": false
+    },
+    {
+      "label": "sequence length 1024  [SLOW]",
+      "diff": 0.018630612364815963,
+      "low": 0.009568148014881598,
+      "high": 0.029336941241500446,
+      "p": 0.0,
+      "significant": true
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+ "variants": 996,
+ "band": [
+  0.15,
+  0.35
+ ],
+ "models": {
+  "gte-modernbert": {
+   "model": "Alibaba-NLP/gte-modernbert-base",
+   "seq": 1024,
+   "texts_through_model": 0,
+   "all": {
+    "queries": 996,
+    "original": 0.509,
+    "renamed": 0.1414,
+    "abs_drop": 0.3676,
+    "rel_drop": 0.722
+   },
+   "matched": {
+    "queries": 110,
+    "original": 0.5329,
+    "renamed": 0.2332,
+    "abs_drop": 0.2997,
+    "rel_drop": 0.562
+   }
+  },
+  "granite-r2": {
+   "model": "ibm-granite/granite-embedding-english-r2",
+   "seq": 512,
+   "texts_through_model": 996,
+   "all": {
+    "queries": 996,
+    "original": 0.128,
+    "renamed": 0.0581,
+    "abs_drop": 0.07,
+    "rel_drop": 0.546
+   },
+   "matched": {
+    "queries": 110,
+    "original": 0.2103,
+    "renamed": 0.1311,
+    "abs_drop": 0.0792,
+    "rel_drop": 0.377
+   }
+  },
+  "jina": {
+   "model": "jinaai/jina-embeddings-v2-base-code",
+   "seq": 512,
+   "texts_through_model": 996,
+   "all": {
+    "queries": 996,
+    "original": 0.1437,
+    "renamed": 0.0404,
+    "abs_drop": 0.1033,
+    "rel_drop": 0.719
+   },
+   "matched": {
+    "queries": 110,
+    "original": 0.1458,
+    "renamed": 0.09,
+    "abs_drop": 0.0559,
+    "rel_drop": 0.383
+   }
+  }
+ },
+ "gte_vs": {
+  "granite-r2": {
+   "all": {
+    "abs_diff": 0.2976,
+    "abs_ci": [
+     0.2712,
+     0.3231
+    ],
+    "rel_diff": 0.176,
+    "rel_ci": [
+     0.1049,
+     0.2468
+    ]
+   },
+   "matched": {
+    "abs_diff": 0.2204,
+    "abs_ci": [
+     0.1504,
+     0.2933
+    ],
+    "rel_diff": 0.186,
+    "rel_ci": [
+     0.0219,
+     0.3378
+    ]
+   }
+  },
+  "jina": {
+   "all": {
+    "abs_diff": 0.2643,
+    "abs_ci": [
+     0.2372,
+     0.2906
+    ],
+    "rel_diff": 0.003,
+    "rel_ci": [
+     -0.059,
+     0.0698
+    ]
+   },
+   "matched": {
+    "abs_diff": 0.2438,
+    "abs_ci": [
+     0.1617,
+     0.3229
+    ],
+    "rel_diff": 0.179,
+    "rel_ci": [
+     -0.0385,
+     0.4034
+    ]
+   }
+  }
+ },
+ "seconds": 463.1
+}

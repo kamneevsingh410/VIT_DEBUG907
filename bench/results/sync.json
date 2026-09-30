@@ -1,0 +1,298 @@
+{
+  "threads": 8,
+  "idle": true,
+  "text_cache": "write-only (never read)",
+  "releases": [
+    {
+      "rev": "v10.8.0",
+      "label": "328f63c72",
+      "functions": 2660,
+      "new_or_changed": 2506,
+      "reused": 0,
+      "through_model": 2506,
+      "export_s": 1.27,
+      "index_s": 1353.7,
+      "total_s": 1355.37
+    },
+    {
+      "rev": "v10.8.1",
+      "label": "610996035",
+      "functions": 2655,
+      "new_or_changed": 170,
+      "reused": 2485,
+      "through_model": 170,
+      "export_s": 1.36,
+      "index_s": 121.02,
+      "total_s": 122.76
+    },
+    {
+      "rev": "v10.8.2",
+      "label": "dbe7d983d",
+      "functions": 2656,
+      "new_or_changed": 28,
+      "reused": 2628,
+      "through_model": 28,
+      "export_s": 1.35,
+      "index_s": 32.19,
+      "total_s": 33.92
+    },
+    {
+      "rev": "v10.8.3",
+      "label": "ec105f400",
+      "functions": 2658,
+      "new_or_changed": 23,
+      "reused": 2635,
+      "through_model": 23,
+      "export_s": 1.27,
+      "index_s": 38.73,
+      "total_s": 40.36
+    },
+    {
+      "rev": "v10.9.0",
+      "label": "977fd5784",
+      "functions": 2663,
+      "new_or_changed": 22,
+      "reused": 2641,
+      "through_model": 22,
+      "export_s": 1.31,
+      "index_s": 37.8,
+      "total_s": 39.45
+    }
+  ],
+  "commits": [
+    {
+      "rev": "ab40dab333bd24ab255f7c63798e86e1a7f66374",
+      "label": "ab40dab33",
+      "functions": 2658,
+      "new_or_changed": 2504,
+      "reused": 0,
+      "through_model": 2504,
+      "export_s": 1.32,
+      "index_s": 1373.48,
+      "total_s": 1375.19
+    },
+    {
+      "rev": "53ed632561cc0336f4194524de6e236f50d67212",
+      "label": "53ed63256",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.36,
+      "index_s": 11.53,
+      "total_s": 13.24
+    },
+    {
+      "rev": "b84d9079feaf9582763356e538c7247383b00e9f",
+      "label": "b84d9079f",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.33,
+      "index_s": 10.9,
+      "total_s": 12.57
+    },
+    {
+      "rev": "9cd66031ebd2e9a0d6fdee3a7b4d7779694306ff",
+      "label": "9cd66031e",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.31,
+      "index_s": 10.94,
+      "total_s": 12.59
+    },
+    {
+      "rev": "820e983b1d5a82d6c9c10895487c2e43b423d6ef",
+      "label": "820e983b1",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.35,
+      "index_s": 11.33,
+      "total_s": 13.02
+    },
+    {
+      "rev": "1e093347e3723c77bb4dc9214e111a3ec78fbbea",
+      "label": "1e093347e",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.34,
+      "index_s": 11.07,
+      "total_s": 12.76
+    },
+    {
+      "rev": "2d7fc3d320b92a8447e7282df14e2b99047cc426",
+      "label": "2d7fc3d32",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.32,
+      "index_s": 11.21,
+      "total_s": 12.86
+    },
+    {
+      "rev": "1c25a1d74c26364742b59f9d57b9a07bb4f8726f",
+      "label": "1c25a1d74",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.3,
+      "index_s": 11.02,
+      "total_s": 12.66
+    },
+    {
+      "rev": "75786adb86f763d781f840feea4afb8d01953b99",
+      "label": "75786adb8",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.3,
+      "index_s": 11.11,
+      "total_s": 12.75
+    },
+    {
+      "rev": "99ccae3ded6f7013b26ed268a208c24473cdeb8f",
+      "label": "99ccae3de",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.33,
+      "index_s": 11.09,
+      "total_s": 12.76
+    },
+    {
+      "rev": "5795987605af9bb163ad3a689a0854b99cd39cbe",
+      "label": "579598760",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.33,
+      "index_s": 11.12,
+      "total_s": 12.79
+    },
+    {
+      "rev": "2072705aa80d009dc077639adc305692f4a6c0b9",
+      "label": "2072705aa",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.28,
+      "index_s": 11.11,
+      "total_s": 12.73
+    },
+    {
+      "rev": "bb03036ba8f7d7f1497ecac17b5e2f3e2951e214",
+      "label": "bb03036ba",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.32,
+      "index_s": 11.22,
+      "total_s": 12.9
+    },
+    {
+      "rev": "43f2374bf5abe825be6068cdfb991f02ba08eac3",
+      "label": "43f2374bf",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.31,
+      "index_s": 11.17,
+      "total_s": 12.82
+    },
+    {
+      "rev": "be1e6da91380d7a10edb1767dd433ca296b96771",
+      "label": "be1e6da91",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.3,
+      "index_s": 11.94,
+      "total_s": 13.58
+    },
+    {
+      "rev": "20dd44ff7deedd594f996fcfe48615fd93498db3",
+      "label": "20dd44ff7",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.32,
+      "index_s": 11.11,
+      "total_s": 12.76
+    },
+    {
+      "rev": "60a7ee5b7a71c1a46cee4026d7e06f8785a0786b",
+      "label": "60a7ee5b7",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.34,
+      "index_s": 11.9,
+      "total_s": 13.58
+    },
+    {
+      "rev": "95e2cb105f1c80362a2355801917425be84e6097",
+      "label": "95e2cb105",
+      "functions": 2658,
+      "new_or_changed": 0,
+      "reused": 2658,
+      "through_model": 0,
+      "export_s": 1.35,
+      "index_s": 11.45,
+      "total_s": 13.15
+    },
+    {
+      "rev": "4d57928ea20c1672864dc0c8ebaff5d877e61c9c",
+      "label": "4d57928ea",
+      "functions": 2663,
+      "new_or_changed": 17,
+      "reused": 2646,
+      "through_model": 17,
+      "export_s": 1.31,
+      "index_s": 35.01,
+      "total_s": 36.66
+    },
+    {
+      "rev": "977fd5784f875fdc2e3436ed15c444ddca63e3d7",
+      "label": "977fd5784",
+      "functions": 2663,
+      "new_or_changed": 0,
+      "reused": 2663,
+      "through_model": 0,
+      "export_s": 1.32,
+      "index_s": 11.62,
+      "total_s": 13.29
+    }
+  ],
+  "summary": {
+    "releases": {
+      "first_total_s": 1355.37,
+      "median_later_total_s": 39.91,
+      "median_later_export_s": 1.33,
+      "median_later_new": 25.5
+    },
+    "commits": {
+      "first_total_s": 1375.19,
+      "median_later_total_s": 12.82,
+      "median_later_export_s": 1.32,
+      "median_later_new": 0
+    }
+  }
+}

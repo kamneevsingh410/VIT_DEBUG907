@@ -1,0 +1,50 @@
+{
+ "rows": [
+  {
+   "repo": "npm",
+   "functions": 2663,
+   "questions": 107,
+   "code": 0.5917,
+   "raw": 0.6249,
+   "diff": 0.0331,
+   "low": -0.0033,
+   "high": 0.0719,
+   "p": 0.073
+  },
+  {
+   "repo": "dsa-recommendation",
+   "functions": 1273,
+   "questions": 193,
+   "code": 0.5685,
+   "raw": 0.559,
+   "diff": -0.0095,
+   "low": -0.0458,
+   "high": 0.0297,
+   "p": 0.638
+  },
+  {
+   "repo": "dsa-website",
+   "functions": 469,
+   "questions": 62,
+   "code": 0.8271,
+   "raw": 0.8704,
+   "diff": 0.0434,
+   "low": 0.0051,
+   "high": 0.0846,
+   "p": 0.026
+  }
+ ],
+ "pooled": {
+  "questions": 362,
+  "diff": 0.0122,
+  "low": -0.0124,
+  "high": 0.0366,
+  "p": 0.326,
+  "significant": false
+ },
+ "private": [
+  "dsa-recommendation",
+  "dsa-website"
+ ],
+ "seconds": 605.8
+}

@@ -1,0 +1,26 @@
+{
+  "note": "Hand-written developer questions over npm/cli v10.9.0 first-party code, each with the function that answers it (path::name; the line number is matched at load time). Written after reading each function; phrased as a developer would ask, avoiding the function's own identifiers where natural.",
+  "release": "v10.9.0",
+  "queries": [
+    {"query": "suggest the closest command when the user mistypes one", "answer": "lib/utils/did-you-mean.js::didYouMean"},
+    {"query": "turn a number of bytes into a human readable size like 1.2 kB", "answer": "lib/utils/format-bytes.js::formatBytes"},
+    {"query": "work out the process exit code from an error object", "answer": "lib/utils/error-message.js::getExitCodeFromError"},
+    {"query": "retry the registry request with a one-time password when two-factor auth is required", "answer": "lib/utils/auth.js::otplease"},
+    {"query": "stamp the node and npm versions into the manifest before it is published", "answer": "workspaces/libnpmpublish/lib/publish.js::patchManifest"},
+    {"query": "walk up parent folders looking for a node_modules/.bin that contains the executable", "answer": "workspaces/libnpmexec/lib/file-exists.js::localFileExists"},
+    {"query": "decide which executable to run from a package's bin entries", "answer": "workspaces/libnpmexec/lib/get-bin-from-manifest.js::getBinFromManifest"},
+    {"query": "skip binary files when printing the diff between two package versions", "answer": "workspaces/libnpmdiff/lib/should-print-patch.js::shouldPrintPatch"},
+    {"query": "reject anything that is not an http or https link before opening it in the browser", "answer": "lib/utils/open-url.js::assertValidUrl"},
+    {"query": "prompt for a password without echoing it to the terminal", "answer": "lib/utils/read-user-info.js::readPassword"},
+    {"query": "compare the lockfile versions with the resolved dependency tree and report mismatches", "answer": "lib/utils/validate-lockfile.js::validateLockfile"},
+    {"query": "build the SPDX identifier for a package in the software bill of materials", "answer": "lib/utils/sbom-spdx.js::toSpdxID"},
+    {"query": "tell the user how many installed packages are asking for donations", "answer": "lib/utils/reify-output.js::packagesFundingMessage"},
+    {"query": "work out which dependency types to leave out from the production, include and omit flags", "answer": "workspaces/config/lib/definitions/definitions.js::buildOmitList"},
+    {"query": "should this dependency be included in the security audit", "answer": "workspaces/arborist/lib/audit-report.js::shouldAudit"},
+    {"query": "check that a provenance attestation matches the package being published", "answer": "workspaces/libnpmpublish/lib/provenance.js::verifyProvenance"},
+    {"query": "print one dependency link with its version range for npm explain", "answer": "lib/utils/explain-dep.js::explainEdge"},
+    {"query": "is the package npx was asked to run already installed, or does it need fetching", "answer": "workspaces/libnpmexec/lib/index.js::missingFromTree"},
+    {"query": "normalise path separators and drop a leading ./ from file patterns", "answer": "workspaces/libnpmdiff/lib/untar.js::normalizeMatch"},
+    {"query": "tab-complete folder names that contain a package.json for npm install", "answer": "lib/commands/install.js::completion"}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "idle": true,
+  "threads": 8,
+  "machine": "Windows 11 / AMD64 / 16 logical CPUs / Python 3.14.6",
+  "cold_start": [
+    {
+      "wall_s": 55.17,
+      "exit": 0,
+      "model_load_s": 52.2,
+      "query_ms": 19.85
+    },
+    {
+      "wall_s": 14.98,
+      "exit": 0,
+      "model_load_s": 12.7,
+      "query_ms": 25.96
+    },
+    {
+      "wall_s": 14.33,
+      "exit": 0,
+      "model_load_s": 11.9,
+      "query_ms": 22.66
+    }
+  ],
+  "index_load_s": 0.84,
+  "model_load_s": 9.08,
+  "warm_query_ms": {
+    "n": 1000,
+    "p50": 690.9614999995028,
+    "p95": 1331.1906999997518,
+    "p99": 1578.0439000000115,
+    "max": 1673.7769000001208
+  },
+  "cached_query_ms": {
+    "p50": 3.4625999996933388,
+    "p95": 4.370100000414823
+  },
+  "encode_throughput": {
+    "docs": 200,
+    "seconds": 83.03,
+    "docs_per_s": 2.41,
+    "chars_per_s": 1652
+  },
+  "peak_rss_mb": 2303,
+  "on_disk_mb": {
+    "index": 71.1,
+    "text_cache": 489.3
+  }
+}

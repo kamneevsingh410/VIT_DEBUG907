@@ -1,0 +1,73 @@
+{
+ "apps": {
+  "repo": "AppsRetrieval (public)",
+  "probed": 996,
+  "ndcg_original": 0.5089,
+  "ndcg_renamed": 0.1414,
+  "diff": -0.3675,
+  "relative_drop": 0.722,
+  "identifier_tokens_changed": 0.505,
+  "matched": {
+   "band": [
+    0.15,
+    0.35
+   ],
+   "probed": 110,
+   "ndcg_original": 0.5329,
+   "ndcg_renamed": 0.2332,
+   "diff": -0.2997,
+   "relative_drop": 0.562,
+   "identifier_tokens_changed": 0.281
+  }
+ },
+ "repos": [
+  {
+   "repo": "npm",
+   "functions": 2663,
+   "questions": 107,
+   "probed": 103,
+   "not_renamable": 4,
+   "identifier_tokens_changed": 0.299,
+   "ndcg_original": 0.594,
+   "ndcg_renamed": 0.4194,
+   "diff": -0.1746,
+   "low": -0.2363,
+   "high": -0.111,
+   "p": 0.0,
+   "relative_drop": 0.294,
+   "seconds": 55.7
+  },
+  {
+   "repo": "dsa-recommendation",
+   "functions": 1273,
+   "questions": 193,
+   "probed": 183,
+   "not_renamable": 10,
+   "identifier_tokens_changed": 0.256,
+   "ndcg_original": 0.5724,
+   "ndcg_renamed": 0.4885,
+   "diff": -0.0839,
+   "low": -0.1209,
+   "high": -0.0509,
+   "p": 0.0,
+   "relative_drop": 0.147,
+   "seconds": 71.6
+  },
+  {
+   "repo": "dsa-website",
+   "functions": 469,
+   "questions": 62,
+   "probed": 61,
+   "not_renamable": 1,
+   "identifier_tokens_changed": 0.181,
+   "ndcg_original": 0.8242,
+   "ndcg_renamed": 0.8113,
+   "diff": -0.0129,
+   "low": -0.0422,
+   "high": 0.0106,
+   "p": 0.289,
+   "relative_drop": 0.016,
+   "seconds": 34.7
+  }
+ ]
+}

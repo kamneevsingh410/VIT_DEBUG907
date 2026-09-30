@@ -1,0 +1,3 @@
+{"id": "q1", "text": "Given an array of integers, find the length of the longest strictly increasing subsequence."}
+{"id": "q2", "text": "Read a graph with n nodes and m edges and print the shortest path length from node 1 to node n, or -1 if unreachable."}
+{"id": "q3", "text": "Count how many times each word appears in a string and print the most frequent word."}

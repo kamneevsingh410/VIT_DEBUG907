@@ -1,0 +1,85 @@
+{
+ "idle": true,
+ "threads": 16,
+ "conf_low": 0.01,
+ "splits": {
+  "sample": {
+   "queries": 1000,
+   "low": 373,
+   "low_with_sections": 366,
+   "base": {
+    "ndcg_at_10": 0.5496223809698692,
+    "mrr": 0.5098936246299847,
+    "recall_at_100": 0.886
+   },
+   "variants": {
+    "seg-mean (low only)": {
+     "ndcg_at_10": 0.5336717232695207,
+     "mrr": 0.49490167510186645,
+     "recall_at_100": 0.876,
+     "diff": -0.015950657700348387,
+     "low": -0.025431541097210266,
+     "high": -0.0070770247796132805,
+     "p": 0.0,
+     "significant": false,
+     "low_top1_base": 0.16085790884718498,
+     "low_top1": 0.13672922252010725,
+     "low_ndcg_base": 0.3436320359542325,
+     "low_ndcg": 0.3008688785806443
+    },
+    "seg-mean (always)": {
+     "ndcg_at_10": 0.5167860332180241,
+     "mrr": 0.47954105906326966,
+     "recall_at_100": 0.858,
+     "diff": -0.032836347751845095,
+     "low": -0.044515007363600305,
+     "high": -0.02191145120295235,
+     "p": 0.0,
+     "significant": false,
+     "low_top1_base": 0.16085790884718498,
+     "low_top1": 0.13672922252010725,
+     "low_ndcg_base": 0.3436320359542325,
+     "low_ndcg": 0.3008688785806443
+    },
+    "seg-rrf (low only)": {
+     "ndcg_at_10": 0.5173304367201706,
+     "mrr": 0.478396966960913,
+     "recall_at_100": 0.883,
+     "diff": -0.0322919442496986,
+     "low": -0.042539812383485295,
+     "high": -0.022311547709677807,
+     "p": 0.0,
+     "significant": false,
+     "low_top1_base": 0.16085790884718498,
+     "low_top1": 0.08847184986595175,
+     "low_ndcg_base": 0.3436320359542325,
+     "low_ndcg": 0.2570584588772925
+    },
+    "seg-rrf (always)": {
+     "ndcg_at_10": 0.4474909351659261,
+     "mrr": 0.39864423588713394,
+     "recall_at_100": 0.873,
+     "diff": -0.1021314458039431,
+     "low": -0.11851726567484355,
+     "high": -0.08777041371592477,
+     "p": 0.0,
+     "significant": false,
+     "low_top1_base": 0.16085790884718498,
+     "low_top1": 0.08847184986595175,
+     "low_ndcg_base": 0.3436320359542325,
+     "low_ndcg": 0.2570584588772925
+    }
+   },
+   "winner": null
+  },
+  "held-out": {
+   "skipped": "no variant won on the sample"
+  }
+ },
+ "latency": {
+  "queries_timed": 40,
+  "first_pass_encode_ms": 696.6,
+  "second_pass_ms_per_low_query": 698.7
+ },
+ "seconds": 656.9
+}

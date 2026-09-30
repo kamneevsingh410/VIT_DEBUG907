@@ -1,0 +1,157 @@
+{
+  "releases": [
+    {
+      "release": "v10.8.0",
+      "functions": 2660,
+      "chars": 2711180,
+      "new_vectors": 2506,
+      "reused_vectors": 0,
+      "texts_through_model": 2506,
+      "encode_s": 1264.1,
+      "total_s": 1271.0,
+      "db_mb": 25.1,
+      "changes": null,
+      "full_rebuild_est_s": 1341.8
+    },
+    {
+      "release": "v10.8.1",
+      "functions": 2655,
+      "chars": 2724782,
+      "new_vectors": 170,
+      "reused_vectors": 2485,
+      "texts_through_model": 170,
+      "encode_s": 97.4,
+      "total_s": 104.0,
+      "db_mb": 40.8,
+      "changes": {
+        "added_ids": 216,
+        "removed_ids": 221,
+        "same_id_changed_text": 124,
+        "texts_not_in_previous": 171
+      },
+      "full_rebuild_est_s": 1339.3
+    },
+    {
+      "release": "v10.8.2",
+      "functions": 2656,
+      "chars": 2727331,
+      "new_vectors": 28,
+      "reused_vectors": 2628,
+      "texts_through_model": 28,
+      "encode_s": 20.1,
+      "total_s": 28.2,
+      "db_mb": 55.5,
+      "changes": {
+        "added_ids": 49,
+        "removed_ids": 48,
+        "same_id_changed_text": 7,
+        "texts_not_in_previous": 28
+      },
+      "full_rebuild_est_s": 1339.8
+    },
+    {
+      "release": "v10.8.3",
+      "functions": 2658,
+      "chars": 2729520,
+      "new_vectors": 23,
+      "reused_vectors": 2635,
+      "texts_through_model": 23,
+      "encode_s": 26.2,
+      "total_s": 34.3,
+      "db_mb": 70.4,
+      "changes": {
+        "added_ids": 7,
+        "removed_ids": 5,
+        "same_id_changed_text": 21,
+        "texts_not_in_previous": 23
+      },
+      "full_rebuild_est_s": 1340.8
+    },
+    {
+      "release": "v10.9.0",
+      "functions": 2663,
+      "chars": 2734056,
+      "new_vectors": 22,
+      "reused_vectors": 2641,
+      "texts_through_model": 22,
+      "encode_s": 25.9,
+      "total_s": 33.3,
+      "db_mb": 84.7,
+      "changes": {
+        "added_ids": 56,
+        "removed_ids": 51,
+        "same_id_changed_text": 17,
+        "texts_not_in_previous": 22
+      },
+      "full_rebuild_est_s": 1343.3
+    }
+  ],
+  "per_version_rows": {
+    "v10.8.0": 2660,
+    "v10.8.1": 2655,
+    "v10.8.2": 2656,
+    "v10.8.3": 2658,
+    "v10.9.0": 2663
+  },
+  "query": "check whether the registry auth token is valid before publishing",
+  "top5": [
+    {
+      "id": "lib/commands/config.js::isProtected#57",
+      "shown": "v10.8.0",
+      "in": [
+        "v10.8.0",
+        "v10.8.1",
+        "v10.8.2",
+        "v10.8.3",
+        "v10.9.0"
+      ]
+    },
+    {
+      "id": "workspaces/config/lib/index.js::validate#367",
+      "shown": "v10.8.0",
+      "in": [
+        "v10.8.0",
+        "v10.8.1",
+        "v10.8.2",
+        "v10.8.3",
+        "v10.9.0"
+      ]
+    },
+    {
+      "id": "test/lib/commands/publish.js::window#721",
+      "shown": "v10.8.1",
+      "in": [
+        "v10.8.0",
+        "v10.8.1",
+        "v10.8.2",
+        "v10.8.3",
+        "v10.9.0"
+      ]
+    },
+    {
+      "id": "test/lib/commands/publish.js::window#361",
+      "shown": "v10.8.0",
+      "in": [
+        "v10.8.0",
+        "v10.8.1",
+        "v10.8.2",
+        "v10.8.3",
+        "v10.9.0"
+      ]
+    },
+    {
+      "id": "test/lib/commands/publish.js::window#421",
+      "shown": "v10.8.0",
+      "in": [
+        "v10.8.0",
+        "v10.8.1",
+        "v10.8.2",
+        "v10.8.3",
+        "v10.9.0"
+      ]
+    }
+  ],
+  "threads": 8,
+  "text_cache": "write-only (never read)",
+  "idle": true
+}
